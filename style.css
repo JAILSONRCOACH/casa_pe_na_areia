@@ -3383,3 +3383,136 @@ input:focus, select:focus, textarea:focus {
 .lb-nav a.lb-next::before {
   right: 10px;
 }
+/*======================================
+=            PÁGINA DE CONTATO         =
+======================================*/
+
+/* Cabeçalho claro – já existe .header-light */
+
+/* Hero / título da página */
+.page-header {
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 80px; /* para não ficar por baixo do header */
+}
+.page-header h1 {
+  color: var(--text-light);
+  font-size: 42px;
+  z-index: 1;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* Introdução */
+.contact-intro-section {
+  text-align: center;
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+.contact-intro-section h2 {
+  font-size: 36px;
+  color: var(--primary-blue);
+  margin-bottom: 20px;
+}
+.contact-intro-section .contact-intro {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-dark);
+}
+
+/* Área principal: formulário + cartão de info */
+.contact-main-section .contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+@media (max-width: 768px) {
+  .contact-main-section .contact-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Formulário */
+.contact-form-wrapper {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+.contact-form-wrapper h3 {
+  font-size: 24px;
+  color: var(--primary-blue);
+  margin-bottom: 20px;
+}
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.submit-button {
+  background: var(--accent-gold);
+  color: var(--deep-blue);
+  padding: 12px 25px;
+  border: none;
+  border-radius: 4px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+.submit-button:hover {
+  background: #e6c200;
+}
+
+/* Card de informações */
+.contact-info-wrapper .contact-info-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+.contact-info-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+.contact-icon i {
+  font-size: 24px;
+  color: var(--primary-blue);
+}
+.contact-details h4 {
+  font-size: 16px;
+  color: var(--primary-blue);
+  margin-bottom: 5px;
+}
+.whatsapp-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--secondary-blue);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.whatsapp-link:hover {
+  color: var(--accent-gold);
+}
+
