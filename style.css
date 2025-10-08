@@ -274,6 +274,8 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   font-weight: 300;
   color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.65em;
 }
 
 .secondary-text {
@@ -361,13 +363,14 @@ footer p {
   .top-header {
     padding: 20px 30px;
   }
-  
+
   .hero-content h1 {
     font-size: 42px;
   }
-  
+
   .primary-text {
     font-size: 32px;
+    letter-spacing: 0.45em;
   }
   
   .hero-content p {
@@ -381,6 +384,17 @@ footer p {
   
   .section h2 {
     font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    gap: 12px;
+  }
+
+  .primary-text {
+    font-size: 28px;
+    letter-spacing: 0.35em;
   }
 }
 
