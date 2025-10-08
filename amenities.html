@@ -47,32 +47,32 @@
     }
   </style>
 </head>
-<body>
+<body class="inner-page" data-page="amenities">
 
   <!-- CABEÇALHO -->
   <header class="top-header header-light">
-    <div class="menu-trigger" id="menu-trigger">
+    <div class="menu-trigger" data-menu-trigger>
       <span class="menu-icon"><i class="fas fa-bars"></i></span>
       <span class="menu-text">MENU</span>
     </div>
-    <button class="booking-button">
+    <a class="booking-button" href="contact.html#reservas">
       RESERVAR AGORA
-    </button>
+    </a>
   </header>
 
   <!-- MENU LATERAL OCULTO (SOMENTE ABRE AO CLICAR) -->
-  <nav class="sidebar" id="sidebar">
-    <div class="close-btn" id="close-btn"><i class="fas fa-times"></i></div>
+  <nav class="sidebar" id="sidebar" aria-label="Menu principal">
+    <div class="close-btn" data-menu-close><i class="fas fa-times"></i></div>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">Sobre</a></li>
-      <li><a href="gallery.html">Galeria</a></li>
-      <li><a href="suites.html">Suítes</a></li>
-      <li><a href="offers.html">Ofertas</a></li>
-      <li><a href="recreation.html">Recreação</a></li>
-      <li><a href="culture.html">Cultura</a></li>
-      <li><a href="special-events.html">Eventos Especiais</a></li>
-      <li><a href="contact.html">Contato</a></li>
+      <li><a href="index.html" data-page="home">Home</a></li>
+      <li><a href="about.html" data-page="about">Sobre</a></li>
+      <li><a href="gallery.html" data-page="gallery">Galeria</a></li>
+      <li><a href="suites.html" data-page="suites">Suítes</a></li>
+      <li><a href="offers.html" data-page="offers">Ofertas</a></li>
+      <li><a href="recreation.html" data-page="recreation">Recreação</a></li>
+      <li><a href="culture.html" data-page="culture">Cultura</a></li>
+      <li><a href="special-events.html" data-page="events">Eventos Especiais</a></li>
+      <li><a href="contact.html" data-page="contact">Contato</a></li>
     </ul>
   </nav>
 
@@ -239,39 +239,9 @@
   <!-- SCRIPTS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
-  
+  <script src="main.js"></script>
+
   <script>
-    // Script para menu lateral
-    document.addEventListener('DOMContentLoaded', function() {
-      const menuTrigger = document.getElementById('menu-trigger');
-      const sidebar = document.getElementById('sidebar');
-      const closeBtn = document.getElementById('close-btn');
-
-      if(menuTrigger && sidebar && closeBtn) {
-        // Abrir menu
-        menuTrigger.addEventListener('click', function() {
-          sidebar.classList.add('active');
-          document.body.style.overflow = 'hidden';
-        });
-
-        // Fechar menu
-        closeBtn.addEventListener('click', function() {
-          sidebar.classList.remove('active');
-          document.body.style.overflow = '';
-        });
-
-        // Clicar fora do menu também fecha
-        document.addEventListener('click', function(event) {
-          if (!sidebar.contains(event.target) && !menuTrigger.contains(event.target) && sidebar.classList.contains('active')) {
-            sidebar.classList.remove('active');
-            document.body.style.overflow = '';
-          }
-        });
-      } else {
-        console.error('Um ou mais elementos do menu não foram encontrados');
-      }
-    });
-    
     // Configuração do Lightbox
     lightbox.option({
       'resizeDuration': 200,
@@ -281,17 +251,15 @@
       'alwaysShowNavOnTouchDevices': true,
       'showImageNumberLabel': true
     });
-    
+
     // Ajuste da visibilidade dos botões após o carregamento da imagem
     document.addEventListener('DOMContentLoaded', function() {
-      // Após o carregamento, garante que os botões sejam visíveis
       $(document).on('click', '[data-lightbox]', function() {
         setTimeout(function() {
           $('.lb-nav a.lb-prev').css('opacity', '1');
           $('.lb-nav a.lb-next').css('opacity', '1');
           $('.lb-data .lb-close').css('opacity', '1');
-          
-          // Remover qualquer elemento que possa estar criando a linha vertical
+
           $('.lb-container').find('*:not(.lb-image, .lb-nav, .lb-prev, .lb-next, .lb-loader, .lb-dataContainer, .lb-numbers, .lb-caption, .lb-closeContainer, .lb-close)').remove();
         }, 100);
       });

@@ -14,32 +14,30 @@
   <!-- AOS para animações de scroll -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
-<body>
+<body class="inner-page" data-page="contact">
 
   <!-- CABEÇALHO -->
   <header class="top-header header-light">
-    <div class="menu-trigger" id="menu-trigger">
+    <div class="menu-trigger" data-menu-trigger>
       <span class="menu-icon"><i class="fas fa-bars"></i></span>
       <span class="menu-text">MENU</span>
     </div>
-    <button class="booking-button">
-      RESERVAR AGORA
-    </button>
+    <a class="booking-button" href="contact.html#reservas">RESERVAR AGORA</a>
   </header>
 
   <!-- MENU LATERAL -->
-  <nav class="sidebar" id="sidebar">
-    <div class="close-btn" id="close-btn"><i class="fas fa-times"></i></div>
+  <nav class="sidebar" id="sidebar" aria-label="Menu principal">
+    <div class="close-btn" data-menu-close><i class="fas fa-times"></i></div>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">Sobre</a></li>
-      <li><a href="gallery.html">Galeria</a></li>
-      <li><a href="suites.html">Suítes</a></li>
-      <li><a href="offers.html">Ofertas</a></li>
-      <li><a href="recreation.html">Recreação</a></li>
-      <li><a href="culture.html">Cultura</a></li>
-      <li><a href="special-events.html">Eventos Especiais</a></li>
-      <li><a href="contact.html" class="active">Contato</a></li>
+      <li><a href="index.html" data-page="home">Home</a></li>
+      <li><a href="about.html" data-page="about">Sobre</a></li>
+      <li><a href="gallery.html" data-page="gallery">Galeria</a></li>
+      <li><a href="suites.html" data-page="suites">Suítes</a></li>
+      <li><a href="offers.html" data-page="offers">Ofertas</a></li>
+      <li><a href="recreation.html" data-page="recreation">Recreação</a></li>
+      <li><a href="culture.html" data-page="culture">Cultura</a></li>
+      <li><a href="special-events.html" data-page="events">Eventos Especiais</a></li>
+      <li><a href="contact.html" data-page="contact">Contato</a></li>
     </ul>
   </nav>
 
@@ -62,7 +60,7 @@
     </section>
     
     <!-- Seção de Contato Principal -->
-    <section class="section contact-main-section">
+    <section class="section contact-main-section" id="reservas">
       <div class="contact-container" data-aos="fade-up">
         <!-- Formulário de Contato -->
         <div class="contact-form-wrapper">
@@ -313,22 +311,9 @@
 
   <!-- SCRIPTS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="main.js"></script>
   
   <script>
-    // Script para menu lateral
-    const menuTrigger = document.getElementById('menu-trigger');
-    const sidebar = document.getElementById('sidebar');
-    const closeBtn = document.getElementById('close-btn');
-
-    menuTrigger.addEventListener('click', () => {
-      sidebar.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    });
-
-    closeBtn.addEventListener('click', () => {
-      sidebar.classList.remove('active');
-      document.body.style.overflow = '';
-    });
     
     // Inicialização das animações AOS
     AOS.init({

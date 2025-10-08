@@ -12,32 +12,32 @@
   <!-- Font Awesome para ícones mais elegantes -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+<body class="inner-page" data-page="about">
 
   <!-- CABEÇALHO -->
   <header class="top-header header-light">
-    <div class="menu-trigger" id="menu-trigger">
+    <div class="menu-trigger" data-menu-trigger>
       <span class="menu-icon"><i class="fas fa-bars"></i></span>
       <span class="menu-text">MENU</span>
     </div>
-    <button class="booking-button">
+    <a class="booking-button" href="contact.html#reservas">
       RESERVAR AGORA
-    </button>
+    </a>
   </header>
 
   <!-- MENU LATERAL (MESMO DO INDEX) -->
-  <nav class="sidebar" id="sidebar">
-    <div class="close-btn" id="close-btn"><i class="fas fa-times"></i></div>
+  <nav class="sidebar" id="sidebar" aria-label="Menu principal">
+    <div class="close-btn" data-menu-close><i class="fas fa-times"></i></div>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html" class="active">Sobre</a></li>
-      <li><a href="gallery.html">Galeria</a></li>
-      <li><a href="suites.html">Suítes</a></li>
-      <li><a href="offers.html">Ofertas</a></li>
-      <li><a href="recreation.html">Recreação</a></li>
-      <li><a href="culture.html">Cultura</a></li>
-      <li><a href="special-events.html">Eventos Especiais</a></li>
-      <li><a href="contact.html">Contato</a></li>
+      <li><a href="index.html" data-page="home">Home</a></li>
+      <li><a href="about.html" data-page="about">Sobre</a></li>
+      <li><a href="gallery.html" data-page="gallery">Galeria</a></li>
+      <li><a href="suites.html" data-page="suites">Suítes</a></li>
+      <li><a href="offers.html" data-page="offers">Ofertas</a></li>
+      <li><a href="recreation.html" data-page="recreation">Recreação</a></li>
+      <li><a href="culture.html" data-page="culture">Cultura</a></li>
+      <li><a href="special-events.html" data-page="events">Eventos Especiais</a></li>
+      <li><a href="contact.html" data-page="contact">Contato</a></li>
     </ul>
   </nav>
 
@@ -103,21 +103,6 @@
     <p>&copy; 2025 Casa Pé na Areia – Caminho de Moisés. Todos os direitos reservados.</p>
   </footer>
 
-  <!-- SCRIPT PARA ABRIR/FECHAR O MENU -->
-  <script>
-    const menuTrigger = document.getElementById('menu-trigger');
-    const sidebar = document.getElementById('sidebar');
-    const closeBtn = document.getElementById('close-btn');
-
-    menuTrigger.addEventListener('click', () => {
-      sidebar.classList.add('active');
-      document.body.style.overflow = 'hidden'; // Impede rolagem quando menu aberto
-    });
-
-    closeBtn.addEventListener('click', () => {
-      sidebar.classList.remove('active');
-      document.body.style.overflow = ''; // Restaura rolagem
-    });
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>

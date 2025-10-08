@@ -25,8 +25,25 @@
 body {
   font-family: 'Montserrat', Arial, sans-serif;
   color: var(--text-dark);
-  background-color: #fff;
+  background-color: var(--summer-sand);
   line-height: 1.6;
+  transition: background-color 0.3s ease;
+}
+
+body.inner-page {
+  background-color: #ffffff;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+main {
+  padding-top: 120px;
+}
+
+.home-page main {
+  padding-top: 0;
 }
 
 /* TIPOGRAFIA LUXUOSA */
@@ -42,7 +59,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ESTILO BASE DO CABEÇALHO */
 .top-header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -66,6 +83,20 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgba(255, 255, 255, 0.95);
   color: var(--primary-blue);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.top-header.is-scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: var(--primary-blue);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.home-page .top-header {
+  position: absolute;
+}
+
+.home-page .top-header.is-scrolled {
+  position: fixed;
 }
 
 /*======================================
@@ -104,6 +135,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* BOTÃO "MAKE A BOOKING" */
 .booking-button {
+  display: inline-block;
   background: transparent;
   border: 1px solid var(--accent-gold);
   color: var(--accent-gold);
@@ -116,6 +148,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.3s;
   border-radius: 3px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
 }
 
 .booking-button:hover {
@@ -304,6 +337,12 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.8;
 }
 
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
 .section h2 {
   font-size: 42px;
   margin-bottom: 30px;
@@ -361,7 +400,11 @@ footer p {
   .top-header {
     padding: 20px 30px;
   }
-  
+
+  main {
+    padding-top: 100px;
+  }
+
   .hero-content h1 {
     font-size: 42px;
   }
@@ -409,7 +452,7 @@ footer p {
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-top: 80px;
+  margin-top: 0;
 }
 
 .page-header::after {
