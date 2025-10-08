@@ -302,6 +302,8 @@
     const sidebar = document.getElementById('sidebar');
     const closeBtn = document.getElementById('close-btn');
 
+    document.body.classList.add('animations-enabled');
+
     menuTrigger.addEventListener('click', () => {
       sidebar.classList.add('active');
       document.body.style.overflow = 'hidden';
@@ -314,29 +316,31 @@
     
     // Inicialização dos sliders
     const swipers = document.querySelectorAll('.suite-swiper');
-    swipers.forEach(swiperElement => {
-      new Swiper(swiperElement, {
-        slidesPerView: 1,
-        spaceBetween: 0,
-        loop: true,
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: swiperElement.querySelector('.swiper-pagination'),
-          clickable: true,
-        },
-        navigation: {
-          nextEl: swiperElement.querySelector('.swiper-button-next'),
-          prevEl: swiperElement.querySelector('.swiper-button-prev'),
-        },
-        effect: 'fade',
-        fadeEffect: {
-          crossFade: true
-        }
+    if (typeof Swiper !== 'undefined') {
+      swipers.forEach(swiperElement => {
+        new Swiper(swiperElement, {
+          slidesPerView: 1,
+          spaceBetween: 0,
+          loop: true,
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: swiperElement.querySelector('.swiper-pagination'),
+            clickable: true,
+          },
+          navigation: {
+            nextEl: swiperElement.querySelector('.swiper-button-next'),
+            prevEl: swiperElement.querySelector('.swiper-button-prev'),
+          },
+          effect: 'fade',
+          fadeEffect: {
+            crossFade: true
+          }
+        });
       });
-    });
+    }
     
     // Animação de scroll
     function isInViewport(element) {
