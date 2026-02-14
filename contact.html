@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - Casa Pé na Areia | Caminho de Moisés</title>
+  <link rel="stylesheet" href="style.css?v=3">
+  <!-- Fontes Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome para ícones mais elegantes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- AOS para animações de scroll -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="top-header header-light">
+    <div class="menu-trigger" id="menu-trigger">
+      <span class="menu-icon"><i class="fas fa-bars"></i></span>
+      <span class="menu-text">MENU</span>
+    </div>
+    <button class="booking-button" onclick="window.open('https://wa.me/558330112982', '_blank')">
+      RESERVAR AGORA
+    </button>
+  </header>
+
+  <!-- MENU LATERAL -->
+  <nav class="sidebar" id="sidebar">
+    <div class="close-btn" id="close-btn"><i class="fas fa-times"></i></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">Sobre</a></li>
+      <li><a href="gallery.html">Galeria</a></li>
+      <li><a href="special-events.html">Eventos Especiais</a></li>
+      <li><a href="contact.html" class="active">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main>
+    <!-- Cabeçalho da página -->
+    <div class="page-header" style="background-image: url('images/praia_4k_uhd.jpg');">
+      <h1>Entre em Contato</h1>
+    </div>
+
+    <!-- Seção de Introdução -->
+    <section class="section contact-intro-section">
+      <h2>Estamos à Sua Disposição</h2>
+      <p class="contact-intro">
+        Estamos situados em Ponta de Lucena, um paraíso à beira-mar na Paraíba, oferecendo fácil acesso às belezas
+        naturais da região.
+      </p>
+    </section>
+
+    <!-- Seção de Contato Principal -->
+    <section class="section contact-main-section">
+      <div class="contact-container" data-aos="fade-up">
+        <!-- Formulário de Contato -->
+        <div class="contact-form-wrapper">
+          <h3>Envie-nos uma Mensagem</h3>
+          <form class="contact-form" onsubmit="sendToEmail(event)">
+            <div class="form-group">
+              <label for="name">Nome Completo</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Telefone</label>
+                <input type="tel" id="phone" name="phone">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Assunto</label>
+              <select id="subject" name="subject" required>
+                <option value="" disabled selected>Selecione um assunto</option>
+                <option value="reservations">Reservas</option>
+                <option value="information">Informações</option>
+                <option value="feedback">Feedback</option>
+                <option value="events">Eventos</option>
+                <option value="partnerships">Parcerias</option>
+                <option value="other">Outro</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Mensagem</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <div class="form-group privacy-policy">
+              <input type="checkbox" id="privacy" name="privacy" required>
+              <label for="privacy">Concordo com a <a href="#">Política de Privacidade</a></label>
+            </div>
+
+            <button type="submit" class="submit-button">Enviar Mensagem</button>
+          </form>
+        </div>
+
+        <!-- Informações de Contato -->
+        <div class="contact-info-wrapper">
+          <div class="contact-info-card">
+            <h3>Informações de Contato</h3>
+
+            <div class="contact-info-items">
+              <div class="contact-info-item">
+                <div class="contact-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>Endereço</h4>
+                  <p>Rua Eugênio de Souza Falcão, 384,<br>Ponta de Lucena, Lucena - PB</p>
+                </div>
+              </div>
+
+
+
+              <div class="contact-info-item">
+                <div class="contact-icon">
+                  <i class="fab fa-whatsapp"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>WhatsApp</h4>
+                  <p><a href="https://wa.me/558330112982" target="_blank"
+                      style="color: inherit; text-decoration: none;">(83) 3011-2982</a></p>
+                  <a href="https://wa.me/558330112982" target="_blank" class="whatsapp-link">Iniciar conversa <i
+                      class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-icon">
+                  <i class="fab fa-instagram"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>Instagram</h4>
+                  <p><a href="https://www.instagram.com/casapenaareiacm/" target="_blank"
+                      style="color: inherit; text-decoration: none;">@casapenaareiacm</a></p>
+                  <a href="https://www.instagram.com/casapenaareiacm/" target="_blank" class="whatsapp-link">Seguir <i
+                      class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>E-mail</h4>
+                  <p><a href="mailto:reserva@casapenaareiacm.com.br"
+                      style="color: inherit; text-decoration: none;">reserva@casapenaareiacm.com.br</a></p>
+                  <p><a href="mailto:contato@casapenaareiacm.com.br"
+                      style="color: inherit; text-decoration: none;">contato@casapenaareiacm.com.br</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Combinada: Informações e Mapa -->
+    <section class="section contact-map-container" data-aos="fade-up">
+      <div class="contact-combined-wrapper" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: start;">
+
+        <!-- Coluna Esquerda: Informações -->
+        <div class="contact-left-col" style="flex: 1; min-width: 300px;">
+          <h2 style="margin-bottom: 20px;">Localização</h2>
+          <p style="margin-bottom: 30px;">
+            Estamos situados em Ponta de Lucena, um paraíso à beira-mar na Paraíba, oferecendo fácil acesso às belezas
+            naturais da região.
+          </p>
+
+          <div class="contact-details-list">
+            <div style="margin-bottom: 20px;">
+              <h4 style="font-size: 18px; margin-bottom: 5px; color: var(--primary-blue);">Endereço</h4>
+              <p>Rua Eugênio de Souza Falcão, 384,<br>Ponta de Lucena, Lucena - PB</p>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+              <h4 style="font-size: 18px; margin-bottom: 5px; color: var(--primary-blue);">Horário</h4>
+              <p>Todos os dias</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coluna Direita: Mapa Pequeno -->
+        <div class="contact-right-col" style="flex: 1; min-width: 300px;">
+          <div class="map-container"
+            style="width: 100%; height: 350px; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.279679119564!2d-34.88725832408472!3d-6.976326193024479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7acc2cb10260657%3A0x633519846b04323e!2sR.%20Eug%C3%AAnio%20de%20Souza%20Falc%C3%A3o%2C%20295%20-%20Planta%20de%20Lucena%2C%20Lucena%20-%20PB%2C%2058315-000!5e0!3m2!1spt-BR!2sbr!4v1706199345000!5m2!1spt-BR!2sbr"
+              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/558330112982" target="_blank" class="float-whatsapp" style="
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 40px;
+      right: 40px;
+      background-color: #25d366;
+      color: #FFF;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 3px #999;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    " onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Perguntas Frequentes -->
+    <section class="section faq-contact-section">
+      <h2>Perguntas Frequentes</h2>
+      <p class="section-intro">
+        Encontre respostas rápidas para as dúvidas mais comuns sobre nossa propriedade e serviços.
+      </p>
+
+      <div class="faq-container" data-aos="fade-up">
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Qual o horário de check-in e check-out?</h3>
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+          </div>
+          <div class="faq-answer">
+            <p>O check-in é realizado a partir das 14h e o check-out até as 12h. Mediante disponibilidade e consulta
+              prévia, oferecemos opções de early check-in e late check-out.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Como funciona o fenômeno do "Caminho de Moisés"?</h3>
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+          </div>
+          <div class="faq-answer">
+            <p>O "Caminho de Moisés" é um fenômeno natural que ocorre durante a maré baixa, formando um caminho de areia
+              que permite caminhar entre as águas. Este evento ocorre em horários específicos, que variam conforme a
+              tábua de marés. Nossa equipe fornece informações atualizadas sobre os melhores momentos para vivenciar
+              esta experiência única.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>A cozinha é equipada?</h3>
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+          </div>
+          <div class="faq-answer">
+            <p>Sim, nossa cozinha é completa e totalmente equipada com todos os utensílios e eletrodomésticos
+              necessários para o preparo de suas refeições, proporcionando total autonomia e conforto durante sua
+              estadia.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>É possível realizar eventos na propriedade?</h3>
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+          </div>
+          <div class="faq-answer">
+            <p>Sim! A Casa Pé na Areia é o cenário ideal para casamentos, aniversários e eventos corporativos. Visite
+              nossa página de <a href="special-events.html">Eventos Especiais</a> para mais detalhes e solicite um
+              orçamento.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>A Casa Pé na Areia aceita animais de estimação?</h3>
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+          </div>
+          <div class="faq-answer">
+            <p>Sim, aceitamos animais de estimação de pequeno porte em acomodações específicas, mediante taxa adicional.
+              Recomendamos informar no momento da reserva para garantirmos a melhor experiência para você e seu pet.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Quais formas de pagamento são aceitas?</h3>
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+          </div>
+          <div class="faq-answer">
+            <p>Aceitamos cartões de crédito e débito das principais bandeiras, transferência bancária e PIX. Para
+              reservas antecipadas, solicitamos um depósito de 30% do valor total.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Há Wi-Fi disponível na propriedade?</h3>
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+          </div>
+          <div class="faq-answer">
+            <p>Sim, oferecemos Wi-Fi gratuito de alta velocidade em todas as áreas da propriedade, permitindo que nossos
+              hóspedes permaneçam conectados mesmo em meio ao paraíso.</p>
+          </div>
+        </div>
+      </div>
+
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>&copy; 2025 Casa Pé na Areia – Caminho de Moisés. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <script>
+    function sendToEmail(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const subjectSelect = document.getElementById('subject');
+      const subject = subjectSelect.options[subjectSelect.selectedIndex].text;
+      const message = document.getElementById('message').value;
+
+      const emailBody = `Nome: ${name}
+E-mail: ${email}
+Telefone: ${phone}
+Assunto: ${subject}
+
+Mensagem:
+${message}`;
+
+      const encodedBody = encodeURIComponent(emailBody);
+      const encodedSubject = encodeURIComponent(`Contato pelo Site: ${subject}`);
+      const mailtoUrl = `mailto:contato@casapenaareiacm.com.br?subject=${encodedSubject}&body=${encodedBody}`;
+
+      window.location.href = mailtoUrl;
+    }
+
+    // Script para menu lateral
+    const menuTrigger = document.getElementById('menu-trigger');
+    const sidebar = document.getElementById('sidebar');
+    const closeBtn = document.getElementById('close-btn');
+
+    menuTrigger.addEventListener('click', () => {
+      sidebar.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+
+    closeBtn.addEventListener('click', () => {
+      sidebar.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+
+    // Inicialização das animações AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out',
+      once: true
+    });
+
+    // Accordion para FAQ
+    document.addEventListener('DOMContentLoaded', function () {
+      const faqItems = document.querySelectorAll('.faq-item');
+
+      faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+
+        question.addEventListener('click', () => {
+          // Toggle da classe active para abrir/fechar
+          item.classList.toggle('active');
+
+          // Toggle do ícone
+          const icon = item.querySelector('.faq-icon i');
+          if (item.classList.contains('active')) {
+            icon.classList.replace('fa-plus', 'fa-minus');
+          } else {
+            icon.classList.replace('fa-minus', 'fa-plus');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria - Casa Pé na Areia | Caminho de Moisés</title>
+  <link rel="stylesheet" href="style.css?v=48">
+  <!-- Fontes Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome para ícones mais elegantes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- USANDO Lightbox2 padrão sem modificações -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+
+  <style>
+    /* Remover qualquer overlay ou tela adicional */
+    .lb-overlay,
+    .lb-screen {
+      display: none !important;
+    }
+
+    /* Garantir que os controles de navegação sejam visíveis */
+    .lb-nav a.lb-prev,
+    .lb-nav a.lb-next {
+      opacity: 1 !important;
+    }
+
+    /* Remover quaisquer elementos que possam estar criando linhas */
+    .lb-container::before,
+    .lb-container::after {
+      display: none !important;
+    }
+
+    /* Botão de fechar visível */
+    .lb-data .lb-close {
+      opacity: 1 !important;
+    }
+
+    /* Garantir que a imagem seja exibida corretamente */
+    .lb-image {
+      max-width: 100%;
+      height: auto !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="top-header header-light">
+    <div class="menu-trigger" id="menu-trigger">
+      <span class="menu-icon"><i class="fas fa-bars"></i></span>
+      <span class="menu-text">MENU</span>
+    </div>
+    <button class="booking-button" onclick="window.open('https://wa.me/558330112982', '_blank')">
+      RESERVAR AGORA
+    </button>
+  </header>
+
+  <!-- MENU LATERAL OCULTO (SOMENTE ABRE AO CLICAR) -->
+  <nav class="sidebar" id="sidebar">
+    <div class="close-btn" id="close-btn"><i class="fas fa-times"></i></div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">Sobre</a></li>
+      <li><a href="gallery.html">Galeria</a></li>
+      <li><a href="special-events.html">Eventos Especiais</a></li>
+      <li><a href="contact.html">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main>
+    <!-- Cabeçalho da página -->
+    <div class="page-header">
+      <div class="hero-parallax-layer">
+        <div class="hero-bg" style="background-image: url('images/Rio_Miriri.png');"></div>
+      </div>
+      <h1>Nossa Galeria</h1>
+    </div>
+
+    <!-- Categorias de Galeria -->
+    <div class="gallery-categories">
+      <button class="gallery-filter active" data-filter="all">Todos</button>
+      <button class="gallery-filter" data-filter="property"
+        onclick="window.location.href='property.html'">Propriedade</button>
+      <button class="gallery-filter" data-filter="beach" onclick="window.location.href='beach.html'">Praia</button>
+      <button class="gallery-filter" data-filter="experiences"
+        onclick="window.location.href='experiences.html'">Experiências</button>
+    </div>
+
+
+    <!-- Seção de Galeria -->
+    <section class="section gallery-section">
+      <h2>Momentos Inesquecíveis</h2>
+      <p class="gallery-intro">
+        Conheça um pouco mais da nossa estrutura exclusiva e das belezas naturais que rodeiam a Casa Pé na Areia.
+        Cada imagem captura a essência do nosso paraíso à beira-mar.
+      </p>
+
+
+      <!-- Grade de Imagens -->
+      <div class="gallery-grid">
+        <!-- PROPRIEDADE -->
+        <div class="gallery-item" data-category="property">
+          <a href="images/PARTETRAZEIRADACASA.png" data-lightbox="gallery" data-title="Fachada Traseira">
+            <img src="images/PARTETRAZEIRADACASA.png" alt="Fachada Traseira">
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <h3>Fachada Traseira</h3>
+                <p>Vista da parte traseira da casa</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="gallery-item" data-category="property">
+          <a href="images/churrasqueira.jpg" data-lightbox="gallery" data-title="Churrasqueira">
+            <img src="images/churrasqueira.jpg" alt="Churrasqueira">
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <h3>Churrasqueira</h3>
+                <p>Área de churrasqueira</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="gallery-item" data-category="property">
+          <a href="images/PISCINA.png" data-lightbox="gallery" data-title="Piscina">
+            <img src="images/PISCINA.png" alt="Piscina">
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <h3>Piscina</h3>
+                <p>Piscina privativa</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="gallery-item" data-category="property">
+          <a href="images/sala.png" data-lightbox="gallery" data-title="Sala">
+            <img src="images/sala.png" alt="Sala">
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <h3>Sala Principal</h3>
+                <p>Espaço amplo e confortável</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="gallery-item" data-category="property">
+          <a href="images/saladetv.png" data-lightbox="gallery" data-title="Sala de TV">
+            <img src="images/saladetv.png" alt="Sala de TV">
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <h3>Sala de TV</h3>
+                <p>Espaço de entretenimento</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="gallery-item" data-category="property">
+          <a href="images/cozinha.png" data-lightbox="gallery" data-title="Cozinha">
+            <img src="images/cozinha.png" alt="Cozinha">
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <h3>Cozinha</h3>
+                <p>Cozinha completa e equipada</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="gallery-item" data-category="property">
+          <a href="images/QUARTOMASTER01.png" data-lightbox="gallery" data-title="Suíte Master">
+            <img src="images/QUARTOMASTER01.png" alt="Suíte Master">
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <h3>Suíte Master</h3>
+                <p>Suíte principal</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="gallery-item" data-category="property">
+          <a href="images/QUARTO06.png" data-lightbox="gallery" data-title="Quarto">
+            <img src="images/QUARTO06.png" alt="Quarto">
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <h3>Quarto</h3>
+                <p>Quarto confortável</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="gallery-item" data-category="property">
+          <a href="images/varadalateral.png" data-lightbox="gallery" data-title="Varanda Lateral">
+            <img src="images/varadalateral.png" alt="Varanda Lateral">
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <h3>Varanda Lateral</h3>
+                <p>Espaço ao ar livre</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="gallery-item" data-category="property">
+          <a href="images/varandasuperior.png" data-lightbox="gallery" data-title="Varanda Superior">
+            <img src="images/varandasuperior.png" alt="Varanda Superior">
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <h3>Varanda Superior</h3>
+                <p>Vista privilegiada</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- PRAIA -->
+        <div class="gallery-item" data-category="beach">
+          <a href="images/lucenapraia.jpg" data-lightbox="gallery" data-title="Praia de Lucena">
+            <img src="images/lucenapraia.jpg" alt="Praia de Lucena">
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <h3>Praia de Lucena</h3>
+                <p>Beleza natural única</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="gallery-item" data-category="beach">
+          <a href="images/caminho.png" data-lightbox="gallery" data-title="Caminho de Moisés">
+            <img src="images/caminho.png" alt="Caminho de Moisés">
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <h3>Caminho de Moisés</h3>
+                <p>Fenômeno natural único</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="gallery-item" data-category="beach">
+          <a href="images/fofo.png" data-lightbox="gallery" data-title="Vista Panorâmica">
+            <img src="images/fofo.png" alt="Vista Panorâmica">
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <h3>Vista Panorâmica</h3>
+                <p>Paisagem deslumbrante</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- EXPERIÊNCIAS -->
+        <div class="gallery-item" data-category="experiences">
+          <a href="images/caminhodemoises01.png" data-lightbox="gallery" data-title="Caminho de Moisés">
+            <img src="images/caminhodemoises01.png" alt="Caminho de Moisés">
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <h3>Caminho de Moisés</h3>
+                <p>O fenômeno natural que dá nome à nossa casa</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="gallery-item" data-category="experiences">
+          <a href="images/bomsucesso.jpg" data-lightbox="gallery" data-title="Ruínas de Bom Sucesso">
+            <img src="images/bomsucesso.jpg" alt="Ruínas de Bom Sucesso">
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <h3>Ruínas de Bom Sucesso</h3>
+                <p>Ponto histórico</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="gallery-item" data-category="experiences">
+          <a href="images/fotoigrejadaguia.jpg" data-lightbox="gallery" data-title="Igreja da Guia">
+            <img src="images/fotoigrejadaguia.jpg" alt="Igreja da Guia">
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <h3>Igreja Nossa Senhora da Guia</h3>
+                <p>Igreja histórica do século XVIII</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="gallery-item" data-category="experiences">
+          <a href="images/riomiriri.png" data-lightbox="gallery" data-title="Mirante do Rio Miriri">
+            <img src="images/riomiriri.png" alt="Mirante do Rio Miriri">
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <h3>Mirante do Rio Miriri</h3>
+                <p>Contemplação da natureza</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="gallery-item" data-category="experiences">
+          <a href="images/coqueirosdelucena.png" data-lightbox="gallery" data-title="Coqueirais de Lucena">
+            <img src="images/coqueirosdelucena.png" alt="Coqueirais">
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <h3>Passeio nos Coqueirais</h3>
+                <p>Paisagem tropical</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Seção de Navegação Rápida para as Categorias -->
+      <div class="category-navigation">
+        <h3>Explore por Categoria</h3>
+        <div class="category-buttons">
+          <a href="property.html" class="category-button">
+            <i class="fas fa-home"></i>
+            <span>Propriedade</span>
+          </a>
+          <a href="beach.html" class="category-button">
+            <i class="fas fa-water"></i>
+            <span>Praia</span>
+          </a>
+          <a href="experiences.html" class="category-button">
+            <i class="fas fa-compass"></i>
+            <span>Experiências</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>&copy; 2025 Casa Pé na Areia – Caminho de Moisés. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+  <script>
+    // Script para menu lateral
+    const menuTrigger = document.getElementById('menu-trigger');
+    const sidebar = document.getElementById('sidebar');
+    const closeBtn = document.getElementById('close-btn');
+
+    menuTrigger.addEventListener('click', () => {
+      sidebar.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+
+    closeBtn.addEventListener('click', () => {
+      sidebar.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+
+    // Parallax Otimizado para Mobile
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
+    window.addEventListener('scroll', function () {
+      lastScrollY = window.scrollY;
+      if (!ticking) {
+        window.requestAnimationFrame(function () {
+          const heroParallax = document.querySelector('.hero-parallax-layer');
+          if (heroParallax) {
+            heroParallax.style.transform = `translate3d(0, ${lastScrollY * 0.4}px, 0)`;
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
+    // Configuração do Lightbox - usando valores padrão com mínimas modificações
+    lightbox.option({
+      'resizeDuration': 200,
+      'wrapAround': true,
+      'fadeDuration': 300,
+      'albumLabel': "Imagem %1 de %2",
+      'alwaysShowNavOnTouchDevices': true,
+      'showImageNumberLabel': true
+    });
+
+    // Ajuste da visibilidade dos botões após o carregamento da imagem
+    document.addEventListener('DOMContentLoaded', function () {
+      // Após o carregamento, garante que os botões sejam visíveis
+      $(document).on('click', '[data-lightbox]', function () {
+        setTimeout(function () {
+          $('.lb-nav a.lb-prev').css('opacity', '1');
+          $('.lb-nav a.lb-next').css('opacity', '1');
+          $('.lb-data .lb-close').css('opacity', '1');
+
+          // Remover qualquer elemento que possa estar criando a linha vertical
+          $('.lb-container').find('*:not(.lb-image, .lb-nav, .lb-prev, .lb-next, .lb-loader, .lb-dataContainer, .lb-numbers, .lb-caption, .lb-closeContainer, .lb-close)').remove();
+        }, 100);
+      });
+    });
+
+    // Filtro de categorias na galeria
+    document.addEventListener('DOMContentLoaded', function () {
+      const filterButtons = document.querySelectorAll('.gallery-filter');
+      const galleryItems = document.querySelectorAll('.gallery-item');
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          // Se o botão tem onclick para navegação, não executamos o filtro
+          if (this.hasAttribute('onclick')) {
+            return;
+          }
+
+          // Remove a classe 'active' de todos os botões
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+
+          // Adiciona a classe 'active' ao botão clicado
+          this.classList.add('active');
+
+          // Obtém o valor do filtro
+          const filterValue = this.getAttribute('data-filter');
+
+          // Filtra os itens da galeria
+          galleryItems.forEach(item => {
+            if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+              item.style.display = 'block';
+              setTimeout(() => {
+                item.style.opacity = '1';
+                item.style.transform = 'scale(1)';
+              }, 50);
+            } else {
+              item.style.opacity = '0';
+              item.style.transform = 'scale(0.8)';
+              setTimeout(() => {
+                item.style.display = 'none';
+              }, 300);
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

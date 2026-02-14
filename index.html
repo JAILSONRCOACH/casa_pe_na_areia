@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casa Pé na Areia – Caminho de Moisés | Experiência Premium à Beira-Mar</title>
+  <link rel="stylesheet" href="style.css?v=42">
+  <!-- Fontes Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome para ícones mais elegantes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- CABEÇALHO COM IMAGEM DE FUNDO (index) -->
+  <header class="top-header header-transparent">
+    <!-- Botão que abre o menu lateral -->
+    <div class="menu-trigger" id="menu-trigger">
+      <span class="menu-icon"><i class="fas fa-bars"></i></span>
+      <span class="menu-text">MENU</span>
+    </div>
+    <!-- Botão "MAKE A BOOKING" -->
+    <button class="booking-button" onclick="window.open('https://wa.me/558330112982', '_blank')">RESERVAR AGORA</button>
+  </header>
+
+  <!-- MENU LATERAL OCULTO (SOMENTE ABRE AO CLICAR) -->
+  <nav class="sidebar" id="sidebar">
+    <div class="close-btn" id="close-btn"><i class="fas fa-times"></i></div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">Sobre</a></li>
+      <li><a href="gallery.html">Galeria</a></li>
+      <li><a href="special-events.html">Eventos Especiais</a></li>
+      <li><a href="contact.html">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main>
+    <!-- SEÇÃO HERO COM IMAGEM DE FUNDO -->
+    <section class="hero">
+      <video autoplay muted loop playsinline class="hero-video">
+        <source src="images/video_caminho_de_moises.mp4" type="video/mp4">
+      </video>
+      <div class="hero-content">
+        <h1 class="hero-title" aria-label="Casa Pé na Areia">
+          <span class="hero-line-1">CASA PÉ NA</span>
+          <span class="hero-line-2">AREIA</span>
+        </h1>
+        <p class="hero-subtitle">CAMINHO DE MOISÉS</p>
+      </div>
+    </section>
+
+    <!-- SEÇÃO DE DESTAQUES -->
+    <section class="section">
+      <h2>Experiência Exclusiva</h2>
+      <p>
+        Desfrute de uma experiência única, inspirada na tranquilidade do mar e na hospitalidade premium.
+        A Casa Pé na Areia – Caminho de Moisés oferece o equilíbrio perfeito entre luxo, conforto e a beleza natural
+        deslumbrante da região.
+      </p>
+      <p>
+        Nossa propriedade à beira-mar proporciona acesso exclusivo às águas cristalinas e à paisagem deslumbrante do
+        famoso Caminho de Moisés,
+        um fenômeno natural único que permite caminhar entre as águas durante a maré baixa.
+      </p>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>&copy; 2025 Casa Pé na Areia – Caminho de Moisés. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- SCRIPT PARA ABRIR/FECHAR O MENU -->
+  <script>
+    const menuTrigger = document.getElementById('menu-trigger');
+    const sidebar = document.getElementById('sidebar');
+    const closeBtn = document.getElementById('close-btn');
+
+    menuTrigger.addEventListener('click', () => {
+      sidebar.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Impede rolagem quando menu aberto
+    });
+
+    closeBtn.addEventListener('click', () => {
+      sidebar.classList.remove('active');
+      document.body.style.overflow = ''; // Restaura rolagem
+    });
+
+    // Parallax removido - Substituído por vídeo autoplay
+  </script>
+</body>
+
+</html>

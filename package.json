@@ -1,0 +1,13 @@
+{
+    "name": "casa-pe-na-areia",
+    "version": "1.0.0",
+    "description": "Site Casa Pé na Areia",
+    "main": "index.html",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "mkdir -p dist && cp *.html *.css dist/ && cp -r images dist/"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}

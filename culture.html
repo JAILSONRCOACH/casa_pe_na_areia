@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cultura Local - Casa Pé na Areia | Caminho de Moisés</title>
+  <link rel="stylesheet" href="style.css?v=3">
+  <!-- Fontes Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome para ícones mais elegantes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- AOS para animações de scroll -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="top-header header-light">
+    <div class="menu-trigger" id="menu-trigger">
+      <span class="menu-icon"><i class="fas fa-bars"></i></span>
+      <span class="menu-text">MENU</span>
+    </div>
+    <button class="booking-button">
+      RESERVAR AGORA
+    </button>
+  </header>
+
+  <!-- MENU LATERAL -->
+  <nav class="sidebar" id="sidebar">
+    <div class="close-btn" id="close-btn"><i class="fas fa-times"></i></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">Sobre</a></li>
+      <li><a href="gallery.html">Galeria</a></li>
+      <li><a href="suites.html">Suítes</a></li>
+      <li><a href="offers.html">Ofertas</a></li>
+      <li><a href="recreation.html">Recreação</a></li>
+      <li><a href="culture.html" class="active">Cultura</a></li>
+      <li><a href="special-events.html">Eventos Especiais</a></li>
+      <li><a href="contact.html">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main>
+    <!-- Cabeçalho da página -->
+    <div class="page-header" style="background-image: url('images/praiadepontalucena.jpg');">
+      <h1>Cultura Local</h1>
+    </div>
+    
+    <!-- Seção de Introdução -->
+    <section class="section culture-intro-section">
+      <h2>Tradições e Experiências Autênticas</h2>
+      <p class="culture-intro">
+        Conheça a rica herança cultural que torna nossa região única. A Casa Pé na Areia incentiva os 
+        hóspedes a explorarem e vivenciarem as tradições locais, valorizando a história, a arte, a música 
+        e a gastronomia que fazem parte da identidade desta terra encantadora.
+      </p>
+      
+      <div class="culture-quote">
+        <i class="fas fa-quote-left"></i>
+        <blockquote>
+          "Conhecer uma cultura é conhecer a alma de um lugar. Não há experiência mais enriquecedora do 
+          que se permitir mergulhar nas tradições e nos sabores que definem um povo."
+        </blockquote>
+        <p class="quote-author">— Maria Santos, Historiadora Local</p>
+      </div>
+    </section>
+    
+    <!-- Seção de Aspectos Culturais -->
+    <section class="culture-grid-section">
+      <div class="culture-grid">
+        <!-- História e Tradições -->
+        <div class="culture-item" data-aos="fade-up">
+          <div class="culture-icon">
+            <i class="fas fa-book-open"></i>
+          </div>
+          <h3>História e Tradições</h3>
+          <p>
+            Nossa região tem uma história fascinante que remonta a séculos de influências indígenas, 
+            coloniais e de pescadores tradicionais. O próprio "Caminho de Moisés" é cercado de lendas 
+            passadas de geração em geração.
+          </p>
+          <a href="#history-modal" class="culture-link js-modal-trigger">Descubra Mais</a>
+        </div>
+        
+        <!-- Gastronomia -->
+        <div class="culture-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="culture-icon">
+            <i class="fas fa-utensils"></i>
+          </div>
+          <h3>Gastronomia Local</h3>
+          <p>
+            Os sabores da nossa culinária refletem a riqueza do mar e os ingredientes típicos da região. 
+            Pratos à base de frutos do mar frescos, ervas aromáticas locais e técnicas culinárias tradicionais 
+            criam uma experiência gastronômica inesquecível.
+          </p>
+          <a href="#gastronomy-modal" class="culture-link js-modal-trigger">Sabores Locais</a>
+        </div>
+        
+        <!-- Artesanato -->
+        <div class="culture-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="culture-icon">
+            <i class="fas fa-hands"></i>
+          </div>
+          <h3>Artesanato Regional</h3>
+          <p>
+            Artesãos locais criam peças únicas que expressam a cultura e a conexão com o mar. Cestaria, 
+            esculturas em madeira, trabalhos com conchas e redes de pesca transformadas em arte são 
+            algumas das expressões artísticas que você encontrará.
+          </p>
+          <a href="#crafts-modal" class="culture-link js-modal-trigger">Ver Artesanato</a>
+        </div>
+        
+        <!-- Música e Dança -->
+        <div class="culture-item" data-aos="fade-up" data-aos-delay="300">
+          <div class="culture-icon">
+            <i class="fas fa-music"></i>
+          </div>
+          <h3>Música e Dança</h3>
+          <p>
+            Os ritmos regionais embalam festas tradicionais e celebrações locais. Instrumentos como 
+            violão, pandeiro e berimbau criam a trilha sonora perfeita para as danças típicas que 
+            contam histórias através de movimentos.
+          </p>
+          <a href="#music-modal" class="culture-link js-modal-trigger">Conheça os Ritmos</a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Experiências Culturais -->
+    <section class="section culture-experiences-section">
+      <h2>Experiências Culturais Exclusivas</h2>
+      <p class="section-intro">
+        A Casa Pé na Areia oferece aos hóspedes a oportunidade de vivenciar a cultura local através 
+        de experiências autênticas e cuidadosamente selecionadas.
+      </p>
+      
+      <div class="experiences-container">
+        <!-- Experiência 1 -->
+        <div class="experience-card" data-aos="fade-up">
+          <div class="experience-image">
+            <img src="images/cooking-class.jpg" alt="Aula de Culinária">
+          </div>
+          <div class="experience-content">
+            <h3>Aula de Culinária Regional</h3>
+            <p>
+              Aprenda a preparar pratos típicos da região com nosso chef local. Descubra os segredos 
+              das receitas tradicionais e os ingredientes que fazem nossa gastronomia tão especial.
+            </p>
+            <div class="experience-details">
+              <div class="detail">
+                <i class="far fa-clock"></i>
+                <span>3 horas</span>
+              </div>
+              <div class="detail">
+                <i class="fas fa-user-friends"></i>
+                <span>Máx. 8 pessoas</span>
+              </div>
+            </div>
+            <button class="experience-button">Reservar Experiência</button>
+          </div>
+        </div>
+        
+        <!-- Experiência 2 -->
+        <div class="experience-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="experience-image">
+            <img src="images/local-fishermen.jpg" alt="Saída com Pescadores Locais">
+          </div>
+          <div class="experience-content">
+            <h3>Um Dia com Pescadores Locais</h3>
+            <p>
+              Embarque com pescadores tradicionais da região e conheça técnicas passadas por gerações. 
+              Aprenda sobre a relação especial entre a comunidade e o mar, fonte de sustento e inspiração.
+            </p>
+            <div class="experience-details">
+              <div class="detail">
+                <i class="far fa-clock"></i>
+                <span>5 horas</span>
+              </div>
+              <div class="detail">
+                <i class="fas fa-user-friends"></i>
+                <span>Máx. 6 pessoas</span>
+              </div>
+            </div>
+            <button class="experience-button">Reservar Experiência</button>
+          </div>
+        </div>
+        
+        <!-- Experiência 3 -->
+        <div class="experience-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="experience-image">
+            <img src="images/artisan-workshop.jpg" alt="Oficina de Artesanato">
+          </div>
+          <div class="experience-content">
+            <h3>Oficina de Artesanato</h3>
+            <p>
+              Participe de uma oficina onde artesãos locais compartilham suas habilidades. Crie sua própria 
+              peça inspirada nas tradições da região e leve para casa como lembrança especial da sua visita.
+            </p>
+            <div class="experience-details">
+              <div class="detail">
+                <i class="far fa-clock"></i>
+                <span>2 horas</span>
+              </div>
+              <div class="detail">
+                <i class="fas fa-user-friends"></i>
+                <span>Máx. 10 pessoas</span>
+              </div>
+            </div>
+            <button class="experience-button">Reservar Experiência</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Seção de Eventos Culturais -->
+    <section class="culture-calendar-section" style="background-image: url('images/cultural-event.jpg')">
+      <div class="calendar-content" data-aos="fade-up">
+        <h2>Calendário Cultural</h2>
+        <p>
+          Nossa região é rica em celebrações e eventos tradicionais ao longo do ano. 
+          Planeje sua visita para coincidir com uma destas festividades e enriqueça 
+          ainda mais sua experiência.
+        </p>
+        
+        <div class="events-timeline">
+          <div class="timeline-event">
+            <div class="event-date">Janeiro</div>
+            <div class="event-info">
+              <h4>Festival do Verão</h4>
+              <p>Música, dança e gastronomia celebrando a estação mais vibrante do ano.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-event">
+            <div class="event-date">Abril</div>
+            <div class="event-info">
+              <h4>Festa do Pescador</h4>
+              <p>Celebração em homenagem aos pescadores locais com procissão marítima.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-event">
+            <div class="event-date">Junho</div>
+            <div class="event-info">
+              <h4>Festas Juninas</h4>
+              <p>Tradicionais comemorações com danças, música e culinária típica.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-event">
+            <div class="event-date">Setembro</div>
+            <div class="event-info">
+              <h4>Festival do Artesanato</h4>
+              <p>Exposição e venda de trabalhos dos artesãos da região.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-event">
+            <div class="event-date">Dezembro</div>
+            <div class="event-info">
+              <h4>Celebração de Ano Novo</h4>
+              <p>Rituais tradicionais de gratidão ao mar, com oferendas e música.</p>
+            </div>
+          </div>
+        </div>
+        
+        <button class="calendar-button">Calendário Completo</button>
+      </div>
+    </section>
+    
+    <!-- Recomendações de Passeios Culturais -->
+    <section class="section culture-tours-section">
+      <h2>Passeios Culturais Recomendados</h2>
+      <p class="section-intro">
+        Explore além da Casa Pé na Areia e descubra lugares que contam a história e preservam 
+        as tradições da nossa região.
+      </p>
+      
+      <div class="tours-grid">
+        <div class="tour-item" data-aos="fade-up">
+          <img src="images/historic-village.jpg" alt="Vila Histórica">
+          <div class="tour-overlay">
+            <h3>Vila Histórica</h3>
+            <p>Um passeio pelos casarios coloniais e ruas de pedra que contam a história da colonização.</p>
+            <span class="tour-distance"><i class="fas fa-map-marker-alt"></i> 15 km</span>
+          </div>
+        </div>
+        
+        <div class="tour-item" data-aos="fade-up" data-aos-delay="100">
+          <img src="images/fishing-community.jpg" alt="Comunidade Pesqueira">
+          <div class="tour-overlay">
+            <h3>Comunidade Pesqueira Tradicional</h3>
+            <p>Visite uma autêntica vila de pescadores e conheça seu modo de vida tradicional.</p>
+            <span class="tour-distance"><i class="fas fa-map-marker-alt"></i> 8 km</span>
+          </div>
+        </div>
+        
+        <div class="tour-item" data-aos="fade-up" data-aos-delay="200">
+          <img src="images/local-market.jpg" alt="Mercado Local">
+          <div class="tour-overlay">
+            <h3>Mercado de Produtos Locais</h3>
+            <p>Cores, aromas e sabores se misturam neste tradicional mercado de produtos regionais.</p>
+            <span class="tour-distance"><i class="fas fa-map-marker-alt"></i> 5 km</span>
+          </div>
+        </div>
+        
+        <div class="tour-item" data-aos="fade-up" data-aos-delay="300">
+          <img src="images/artisan-village.jpg" alt="Vila dos Artesãos">
+          <div class="tour-overlay">
+            <h3>Vila dos Artesãos</h3>
+            <p>Ateliês e lojas de artesãos locais onde você pode adquirir peças exclusivas.</p>
+            <span class="tour-distance"><i class="fas fa-map-marker-alt"></i> 12 km</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="tours-note">
+        <i class="fas fa-info-circle"></i>
+        <p>Nossa equipe de concierge pode organizar traslados e guias para qualquer um destes passeios. Consulte na recepção.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>&copy; 2025 Casa Pé na Areia – Caminho de Moisés. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- MODAIS DE INFORMAÇÃO CULTURAL -->
+  <div class="modal" id="history-modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <h2>História e Tradições</h2>
+      <div class="modal-body">
+        <img src="images/history-tradition.jpg" alt="História Local" class="modal-image">
+        <p>
+          A história da região remonta a séculos, com registros que datam da época pré-colonial quando 
+          tribos indígenas habitavam as praias e se alimentavam da fartura do mar. Com a chegada dos 
+          colonizadores, a região se tornou um importante ponto de comércio marítimo.
+        </p>
+        <p>
+          O fenômeno natural do "Caminho de Moisés" sempre foi considerado místico pelos habitantes 
+          originais, que realizavam rituais durante a maré baixa quando o caminho se formava. Hoje, 
+          muitas destas tradições são preservadas em festas e celebrações locais.
+        </p>
+        <p>
+          As comunidades pesqueiras que se estabeleceram na região desenvolveram técnicas próprias de 
+          pesca e navegação, adaptadas às condições únicas do local. O conhecimento sobre marés, ventos 
+          e ciclos lunares é passado oralmente entre gerações.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Outros modais seguiriam o mesmo padrão -->
+
+  <!-- SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  
+  <script>
+    // Script para menu lateral
+    const menuTrigger = document.getElementById('menu-trigger');
+    const sidebar = document.getElementById('sidebar');
+    const closeBtn = document.getElementById('close-btn');
+
+    menuTrigger.addEventListener('click', () => {
+      sidebar.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+
+    closeBtn.addEventListener('click', () => {
+      sidebar.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+    
+    // Inicialização das animações AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out',
+      once: true
+    });
+    
+    // Funcionamento dos modais
+    document.addEventListener('DOMContentLoaded', function() {
+      const modalTriggers = document.querySelectorAll('.js-modal-trigger');
+      const modalCloses = document.querySelectorAll('.modal-close');
+      
+      modalTriggers.forEach(trigger => {
+        trigger.addEventListener('click', function(e) {
+          e.preventDefault();
+          const modal = document.querySelector(this.getAttribute('href'));
+          modal.classList.add('is-active');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+      
+      modalCloses.forEach(close => {
+        close.addEventListener('click', function() {
+          this.closest('.modal').classList.remove('is-active');
+          document.body.style.overflow = '';
+        });
+      });
+      
+      // Fechar modal ao clicar fora
+      window.addEventListener('click', function(e) {
+        if (e.target.classList.contains('modal')) {
+          e.target.classList.remove('is-active');
+          document.body.style.overflow = '';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

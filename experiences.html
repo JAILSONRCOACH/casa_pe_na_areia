@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experiências - Casa Pé na Areia | Caminho de Moisés</title>
+  <link rel="stylesheet" href="style.css?v=48">
+  <!-- Fontes Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome para ícones mais elegantes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Lightbox para galerias de imagens -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+
+  <!-- CSS adicional para melhorar os botões do Lightbox e alternar o layout dos cards -->
+  <style>
+    /* Melhorando a visibilidade dos botões de navegação do Lightbox */
+    .lb-nav a.lb-prev,
+    .lb-nav a.lb-next {
+      opacity: 1 !important;
+      transition: all 0.3s ease;
+    }
+
+    /* Estilizando o botão de fechar */
+    .lb-data .lb-close {
+      opacity: 1 !important;
+      transition: all 0.3s ease;
+    }
+
+    /* Remover qualquer overlay ou tela adicional */
+    .lb-overlay,
+    .lb-screen {
+      display: none !important;
+    }
+
+    /* Remover quaisquer elementos que possam estar criando linhas */
+    .lb-container::before,
+    .lb-container::after {
+      display: none !important;
+    }
+
+    /* Garantir que a imagem seja exibida corretamente */
+    .lb-image {
+      max-width: 100%;
+      height: auto !important;
+    }
+
+    /* Estilos para alternar a posição das imagens */
+    .experience-card {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 30px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .experience-card.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .experience-image {
+      flex: 0 0 40%;
+      max-height: 300px;
+      overflow: hidden;
+    }
+
+    .experience-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .experience-image img:hover {
+      transform: scale(1.05);
+    }
+
+    .experience-content {
+      flex: 0 0 60%;
+      padding: 25px;
+      background-color: #fff;
+    }
+
+    .experience-card.featured {
+      flex-direction: column;
+      margin-bottom: 40px;
+      max-width: 100%;
+    }
+
+    .experience-card.featured .experience-image {
+      flex: 0 0 100%;
+      max-height: 400px;
+    }
+
+    .experience-card.featured .experience-content {
+      flex: 0 0 100%;
+    }
+
+    /* Responsividade para dispositivos móveis */
+    @media (max-width: 768px) {
+
+      .experience-card,
+      .experience-card.reverse {
+        flex-direction: column;
+      }
+
+      .experience-image,
+      .experience-content {
+        flex: 0 0 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="top-header header-light">
+    <div class="menu-trigger" id="menu-trigger">
+      <span class="menu-icon"><i class="fas fa-bars"></i></span>
+      <span class="menu-text">MENU</span>
+    </div>
+    <button class="booking-button" onclick="window.open('https://wa.me/558330112982', '_blank')">
+      RESERVAR AGORA
+    </button>
+  </header>
+
+  <!-- MENU LATERAL -->
+  <nav class="sidebar" id="sidebar">
+    <div class="close-btn" id="close-btn"><i class="fas fa-times"></i></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">Sobre</a></li>
+      <li><a href="gallery.html">Galeria</a></li>
+      <li><a href="special-events.html">Eventos Especiais</a></li>
+      <li><a href="contact.html">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main>
+    <!-- Cabeçalho da página -->
+    <div class="page-header" style="background-image: url('images/coqueirosdelucena.png');">
+      <h1>Experiências Inesquecíveis</h1>
+    </div>
+
+    <!-- Categorias de Navegação (comum a todas as páginas) -->
+    <div class="gallery-categories section-container">
+      <button class="gallery-filter" data-filter="all" onclick="window.location.href='gallery.html'">Todos</button>
+      <button class="gallery-filter" onclick="window.location.href='property.html'">Propriedade</button>
+      <button class="gallery-filter" onclick="window.location.href='beach.html'">Praia</button>
+      <button class="gallery-filter active" onclick="window.location.href='experiences.html'">Experiências</button>
+    </div>
+
+    <!-- Seção de Experiências -->
+    <section class="section experiences-section">
+      <h2>Viva Momentos Únicos</h2>
+      <p class="section-intro">
+        Na Casa Pé na Areia, acreditamos que as melhores lembranças são criadas através de experiências autênticas.
+        Descubra as belezas naturais e históricas que tornam sua estadia verdadeiramente inesquecível.
+      </p>
+
+      <!-- Destaques de Experiências -->
+      <div class="experiences-highlights">
+        <div class="experience-card featured">
+          <div class="experience-image">
+            <a href="images/caminhodemoises01.png" data-lightbox="experiences" data-title="Caminho de Moisés">
+              <img src="images/caminhodemoises01.png" alt="Caminho de Moisés">
+            </a>
+          </div>
+          <div class="experience-content">
+            <h3>Caminho de Moisés</h3>
+            <p class="experience-description">
+              Explore o fascinante fenômeno natural que dá nome à nossa pousada.
+              Caminhe sobre as águas pela faixa de areia que surge durante a maré baixa, criando um cenário único
+              e mágico, semelhante ao episódio bíblico.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grade de Experiências (com layout alternado) -->
+      <div class="experiences-grid">
+        <!-- Experiência 1 -->
+        <div class="experience-card">
+          <div class="experience-image">
+            <a href="images/bomsucesso.jpg" data-lightbox="experiences" data-title="Ruínas de Bom Sucesso">
+              <img src="images/bomsucesso.jpg" alt="Ruínas de Bom Sucesso">
+            </a>
+          </div>
+          <div class="experience-content">
+            <h3>Ruínas de Bom Sucesso</h3>
+            <p class="experience-description">
+              Explore as ruínas históricas próximas à nossa propriedade e conheça mais sobre a rica história da região.
+            </p>
+          </div>
+        </div>
+
+        <!-- Experiência 2 -->
+        <div class="experience-card reverse">
+          <div class="experience-image">
+            <a href="images/fotoigrejadaguia.jpg" data-lightbox="experiences" data-title="Igreja Nossa Senhora da Guia">
+              <img src="images/fotoigrejadaguia.jpg" alt="Igreja Nossa Senhora da Guia">
+            </a>
+          </div>
+          <div class="experience-content">
+            <h3>Igreja Nossa Senhora da Guia</h3>
+            <p class="experience-description">
+              Visite a histórica Igreja do século XVIII e descubra a arte sacra e as tradições religiosas locais.
+            </p>
+          </div>
+        </div>
+
+        <!-- Experiência 3 -->
+        <div class="experience-card">
+          <div class="experience-image">
+            <a href="images/riomiriri.png" data-lightbox="experiences" data-title="Mirante do Rio Miriri">
+              <img src="images/riomiriri.png" alt="Mirante do Rio Miriri">
+            </a>
+          </div>
+          <div class="experience-content">
+            <h3>Mirante do Rio Miriri</h3>
+            <p class="experience-description">
+              Contemple a beleza do encontro das águas do Rio Miriri com o mar, um cenário perfeito para relaxar e
+              apreciar a natureza.
+            </p>
+          </div>
+        </div>
+
+        <!-- Experiência 4 -->
+        <div class="experience-card reverse">
+          <div class="experience-image">
+            <a href="images/coqueirosdelucena.png" data-lightbox="experiences" data-title="Passeio nos Coqueirais">
+              <img src="images/coqueirosdelucena.png" alt="Passeio nos Coqueirais">
+            </a>
+          </div>
+          <div class="experience-content">
+            <h3>Passeio nos Coqueirais</h3>
+            <p class="experience-description">
+              Caminhe pelos belos coqueirais de Lucena e aprecie a paisagem tropical que emoldura nossa região.
+            </p>
+          </div>
+        </div>
+
+        <!-- Experiência 5 - Vista Aérea de Lucena -->
+        <div class="experience-card">
+          <div class="experience-image">
+            <a href="images/cidadedelucena.png" data-lightbox="experiences" data-title="Vista Aérea de Lucena">
+              <img src="images/cidadedelucena.png" alt="Vista Aérea de Lucena">
+            </a>
+          </div>
+          <div class="experience-content">
+            <h3>Vista Aérea de Lucena</h3>
+            <p class="experience-description">
+              Uma perspectiva única da cidade de Lucena e suas belezas naturais vistas do alto.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>&copy; 2025 Casa Pé na Areia – Caminho de Moisés. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+  <script>
+    // Script para menu lateral
+    const menuTrigger = document.getElementById('menu-trigger');
+    const sidebar = document.getElementById('sidebar');
+    const closeBtn = document.getElementById('close-btn');
+
+    menuTrigger.addEventListener('click', () => {
+      sidebar.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+
+    closeBtn.addEventListener('click', () => {
+      sidebar.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+
+    // Configuração do Lightbox
+    lightbox.option({
+      'resizeDuration': 200,
+      'wrapAround': true,
+      'fadeDuration': 300,
+      'albumLabel': "Imagem %1 de %2",
+      'alwaysShowNavOnTouchDevices': true,
+      'showImageNumberLabel': true
+    });
+
+    // Ajuste da visibilidade dos botões após o carregamento da imagem
+    document.addEventListener('DOMContentLoaded', function () {
+      // Após o carregamento, garante que os botões sejam visíveis
+      $(document).on('click', '[data-lightbox]', function () {
+        setTimeout(function () {
+          $('.lb-nav a.lb-prev').css('opacity', '1');
+          $('.lb-nav a.lb-next').css('opacity', '1');
+          $('.lb-data .lb-close').css('opacity', '1');
+
+          // Remover qualquer elemento que possa estar criando a linha vertical
+          $('.lb-container').find('*:not(.lb-image, .lb-nav, .lb-prev, .lb-next, .lb-loader, .lb-dataContainer, .lb-numbers, .lb-caption, .lb-closeContainer, .lb-close)').remove();
+        }, 100);
+      });
+    });
+
+    // Botões de experiência
+    const experienceButtons = document.querySelectorAll('.experience-button, .package-button');
+    experienceButtons.forEach(button => {
+      button.addEventListener('click', function () {
+        const experienceName = this.closest('.experience-card, .package-card').querySelector('h3, h4').textContent;
+        alert(`Reserva solicitada para: ${experienceName}\nEntraremos em contato para confirmar sua experiência.`);
+      });
+    });
+
+    // Slider de depoimentos (versão simples)
+    let currentTestimonial = 0;
+    const testimonials = document.querySelectorAll('.testimonial-item');
+
+    function showTestimonial(index) {
+      testimonials.forEach((testimonial, i) => {
+        if (i === index) {
+          testimonial.style.opacity = '1';
+          testimonial.style.display = 'block';
+        } else {
+          testimonial.style.opacity = '0';
+          testimonial.style.display = 'none';
+        }
+      });
+    }
+
+    // Inicializar o slider
+    showTestimonial(currentTestimonial);
+
+    // Alternar depoimentos a cada 5 segundos
+    setInterval(() => {
+      currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+      showTestimonial(currentTestimonial);
+    }, 5000);
+  </script>
+</body>
+
+</html>

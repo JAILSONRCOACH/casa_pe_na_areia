@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nós - Casa Pé na Areia | Caminho de Moisés</title>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <link rel="stylesheet" href="style.css?v=51">
+  <!-- Fontes Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome para ícones mais elegantes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="top-header header-light">
+    <div class="menu-trigger" id="menu-trigger">
+      <span class="menu-icon"><i class="fas fa-bars"></i></span>
+      <span class="menu-text">MENU</span>
+    </div>
+    <button class="booking-button" onclick="window.open('https://wa.me/558330112982', '_blank')">
+      RESERVAR AGORA
+    </button>
+  </header>
+
+  <!-- MENU LATERAL (MESMO DO INDEX) -->
+  <nav class="sidebar" id="sidebar">
+    <div class="close-btn" id="close-btn"><i class="fas fa-times"></i></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">Sobre</a></li>
+      <li><a href="gallery.html">Galeria</a></li>
+      <li><a href="special-events.html">Eventos Especiais</a></li>
+      <li><a href="contact.html">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main>
+    <!-- Cabeçalho da página -->
+    <div class="page-header" style="background-image: url('images/fachada02.jpg');">
+      <h1>Nossa História</h1>
+    </div>
+
+    <!-- Seção Sobre Nós -->
+    <section class="section about-section">
+      <h2>Sobre Nossa Casa à Beira-Mar</h2>
+
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            A Casa Pé na Areia – Caminho de Moisés nasceu do sonho de oferecer uma experiência verdadeiramente
+            exclusiva,
+            onde o luxo se encontra com a natureza em sua forma mais pura. Nossa propriedade foi cuidadosamente
+            planejada
+            para proporcionar aos nossos hóspedes momentos inesquecíveis em um cenário paradisíaco.
+          </p>
+
+          <p>
+            Nossa localização privilegiada proporciona vistas deslumbrantes do oceano e acesso direto ao famoso "Caminho
+            de Moisés",
+            fenômeno natural único onde, durante a maré baixa, forma-se um caminho no meio do mar que permite caminhar
+            entre as águas.
+          </p>
+
+          <p>
+            Cada detalhe da Casa Pé na Areia foi pensado para unir conforto, sofisticação e a experiência autêntica de
+            estar
+            em contato direto com o mar. Nossa arquitetura foi inspirada nos elementos naturais da região, criando uma
+            conexão
+            harmoniosa entre o ambiente construído e a paisagem natural que nos cerca.
+          </p>
+        </div>
+
+        <div class="about-image">
+          <img src="images/entrada.png" alt="Vista da Casa Pé na Areia" class="img-feature">
+        </div>
+      </div>
+
+      <!-- Nossa Filosofia -->
+      <div class="philosophy-section">
+        <h3>Nossa Filosofia</h3>
+        <p>
+          Acreditamos que o verdadeiro luxo está nos momentos inesquecíveis e nas experiências autênticas.
+          Por isso, nossa equipe está dedicada a criar um ambiente onde nossos hóspedes possam se conectar com a
+          natureza,
+          relaxar e criar memórias que durarão para sempre.
+        </p>
+      </div>
+
+      <!-- Compromisso com a Sustentabilidade -->
+      <div class="sustainability-section">
+        <h3>Compromisso com a Sustentabilidade</h3>
+        <p>
+          A Casa Pé na Areia tem um compromisso profundo com a preservação do meio ambiente e as práticas sustentáveis.
+          Utilizamos sistemas de reuso de água e apoiamos iniciativas locais de conservação marinha.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>&copy; 2025 Casa Pé na Areia – Caminho de Moisés. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- SCRIPT PARA ABRIR/FECHAR O MENU -->
+  <script>
+    const menuTrigger = document.getElementById('menu-trigger');
+    const sidebar = document.getElementById('sidebar');
+    const closeBtn = document.getElementById('close-btn');
+
+    menuTrigger.addEventListener('click', () => {
+      sidebar.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Impede rolagem quando menu aberto
+    });
+
+    closeBtn.addEventListener('click', () => {
+      sidebar.classList.remove('active');
+      document.body.style.overflow = ''; // Restaura rolagem
+    });
+
+    // Parallax Otimizado para Mobile
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
+    window.addEventListener('scroll', function () {
+      lastScrollY = window.scrollY;
+      if (!ticking) {
+        window.requestAnimationFrame(function () {
+          const heroParallax = document.querySelector('.hero-parallax-layer');
+          if (heroParallax) {
+            heroParallax.style.transform = `translate3d(0, ${lastScrollY * 0.4}px, 0)`;
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+  </script>
+</body>
+
+</html>

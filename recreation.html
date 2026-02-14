@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recreação e Lazer - Casa Pé na Areia | Caminho de Moisés</title>
+  <link rel="stylesheet" href="style.css?v=3">
+  <!-- Fontes Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome para ícones mais elegantes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Isotope para filtro e grid -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="top-header header-light">
+    <div class="menu-trigger" id="menu-trigger">
+      <span class="menu-icon"><i class="fas fa-bars"></i></span>
+      <span class="menu-text">MENU</span>
+    </div>
+    <button class="booking-button">
+      RESERVAR AGORA
+    </button>
+  </header>
+
+  <!-- MENU LATERAL -->
+  <nav class="sidebar" id="sidebar">
+    <div class="close-btn" id="close-btn"><i class="fas fa-times"></i></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">Sobre</a></li>
+      <li><a href="gallery.html">Galeria</a></li>
+      <li><a href="suites.html">Suítes</a></li>
+      <li><a href="offers.html">Ofertas</a></li>
+      <li><a href="recreation.html" class="active">Recreação</a></li>
+      <li><a href="culture.html">Cultura</a></li>
+      <li><a href="special-events.html">Eventos Especiais</a></li>
+      <li><a href="contact.html">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main>
+    <!-- Cabeçalho da página -->
+    <div class="page-header" style="background-image: url('images/piscina.jpg');">
+      <h1>Recreação e Lazer</h1>
+    </div>
+    
+    <!-- Seção de Introdução -->
+    <section class="section recreation-intro-section">
+      <h2>Experiências Inesquecíveis</h2>
+      <p class="recreation-intro">
+        Descubra um mundo de atividades e aventuras para tornar sua estadia ainda mais especial. 
+        Seja explorando as belezas naturais da região, praticando esportes aquáticos ou simplesmente 
+        relaxando ao ar livre, temos opções para todos os gostos e idades.
+      </p>
+      
+      <!-- Filtro de Atividades -->
+      <div class="activities-filter">
+        <button class="activity-filter active" data-filter="all">Todas as Atividades</button>
+        <button class="activity-filter" data-filter="water">Atividades Aquáticas</button>
+        <button class="activity-filter" data-filter="land">Aventuras Terrestres</button>
+        <button class="activity-filter" data-filter="wellness">Bem-Estar</button>
+        <button class="activity-filter" data-filter="family">Para Família</button>
+      </div>
+    </section>
+    
+    <!-- Seção de Atividades -->
+    <section class="section activities-section">
+      <div class="activities-grid">
+        <!-- Atividade 1: Stand-up Paddle -->
+        <div class="activity-card" data-category="water family" data-aos="fade-up">
+          <div class="activity-image">
+            <img src="images/sup.jpg" alt="Stand-up Paddle">
+            <div class="activity-difficulty">
+              <span>Iniciante</span>
+            </div>
+          </div>
+          <div class="activity-content">
+            <h3>Stand-up Paddle</h3>
+            <div class="activity-meta">
+              <div class="activity-duration">
+                <i class="far fa-clock"></i>
+                <span>2 horas</span>
+              </div>
+              <div class="activity-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+            <p class="activity-description">
+              Aproveite as águas calmas para praticar stand-up paddle, uma atividade perfeita 
+              para relaxar enquanto admira as belezas naturais. Ideal para iniciantes e famílias, 
+              oferecemos equipamentos de alta qualidade e instruções básicas.
+            </p>
+            <div class="activity-features">
+              <span><i class="fas fa-check-circle"></i> Equipamentos inclusos</span>
+              <span><i class="fas fa-check-circle"></i> Instrutor disponível</span>
+              <span><i class="fas fa-check-circle"></i> Ideal para todos os níveis</span>
+            </div>
+            <button class="activity-button">Agendar Atividade</button>
+          </div>
+        </div>
+        
+        <!-- Atividade 2: Trilhas Ecológicas -->
+        <div class="activity-card" data-category="land family" data-aos="fade-up" data-aos-delay="100">
+          <div class="activity-image">
+            <img src="images/trail.jpg" alt="Trilhas Ecológicas">
+            <div class="activity-difficulty">
+              <span>Moderado</span>
+            </div>
+          </div>
+          <div class="activity-content">
+            <h3>Trilhas Ecológicas</h3>
+            <div class="activity-meta">
+              <div class="activity-duration">
+                <i class="far fa-clock"></i>
+                <span>3-4 horas</span>
+              </div>
+              <div class="activity-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p class="activity-description">
+              Explore as trilhas ecológicas da região com nossos guias especializados. 
+              Conheça a rica biodiversidade local, visite mirantes com vistas deslumbrantes 
+              e descubra fontes naturais escondidas na mata atlântica preservada.
+            </p>
+            <div class="activity-features">
+              <span><i class="fas fa-check-circle"></i> Guia especializado</span>
+              <span><i class="fas fa-check-circle"></i> Kit de hidratação</span>
+              <span><i class="fas fa-check-circle"></i> Diferentes níveis de dificuldade</span>
+            </div>
+            <button class="activity-button">Agendar Atividade</button>
+          </div>
+        </div>
+        
+        <!-- Atividade 3: Yoga ao Ar Livre -->
+        <div class="activity-card" data-category="wellness" data-aos="fade-up" data-aos-delay="200">
+          <div class="activity-image">
+            <img src="images/yoga.jpg" alt="Yoga ao Ar Livre">
+            <div class="activity-difficulty">
+              <span>Todos os níveis</span>
+            </div>
+          </div>
+          <div class="activity-content">
+            <h3>Yoga ao Ar Livre</h3>
+            <div class="activity-meta">
+              <div class="activity-duration">
+                <i class="far fa-clock"></i>
+                <span>1 hora</span>
+              </div>
+              <div class="activity-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p class="activity-description">
+              Conecte-se com a natureza durante nossas sessões de yoga à beira-mar. 
+              Pratique posturas e meditação ao som das ondas, com o nascer do sol como cenário. 
+              Aulas ministradas por instrutores certificados, adaptadas para todos os níveis.
+            </p>
+            <div class="activity-features">
+              <span><i class="fas fa-check-circle"></i> Tapetes e equipamentos inclusos</span>
+              <span><i class="fas fa-check-circle"></i> Instrutor certificado</span>
+              <span><i class="fas fa-check-circle"></i> Aulas ao amanhecer e entardecer</span>
+            </div>
+            <button class="activity-button">Agendar Atividade</button>
+          </div>
+        </div>
+        
+        <!-- Atividade 4: Passeio de Barco -->
+        <div class="activity-card" data-category="water family" data-aos="fade-up" data-aos-delay="300">
+          <div class="activity-image">
+            <img src="images/boat.jpg" alt="Passeio de Barco">
+            <div class="activity-difficulty premium-activity">
+              <span>Premium</span>
+            </div>
+          </div>
+          <div class="activity-content">
+            <h3>Passeio de Barco para Ilhas</h3>
+            <div class="activity-meta">
+              <div class="activity-duration">
+                <i class="far fa-clock"></i>
+                <span>6 horas</span>
+              </div>
+              <div class="activity-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p class="activity-description">
+              Embarque em uma aventura exclusiva para explorar as ilhas paradisíacas da região. 
+              Navegue em águas cristalinas, visite praias desertas e desfrute de momentos inesquecíveis 
+              com paradas para mergulho e snorkeling em locais privilegiados.
+            </p>
+            <div class="activity-features">
+              <span><i class="fas fa-check-circle"></i> Lanche e bebidas inclusos</span>
+              <span><i class="fas fa-check-circle"></i> Equipamento de snorkeling</span>
+              <span><i class="fas fa-check-circle"></i> Capitão experiente</span>
+            </div>
+            <button class="activity-button premium-button">Agendar Atividade</button>
+          </div>
+        </div>
+        
+        <!-- Atividade 5: Pesca Esportiva -->
+        <div class="activity-card" data-category="water" data-aos="fade-up" data-aos-delay="100">
+          <div class="activity-image">
+            <img src="images/fishing.jpg" alt="Pesca Esportiva">
+            <div class="activity-difficulty">
+              <span>Iniciante/Avançado</span>
+            </div>
+          </div>
+          <div class="activity-content">
+            <h3>Pesca Esportiva</h3>
+            <div class="activity-meta">
+              <div class="activity-duration">
+                <i class="far fa-clock"></i>
+                <span>4 horas</span>
+              </div>
+              <div class="activity-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+            <p class="activity-description">
+              Experimente a emoção da pesca esportiva com nossa equipe especializada. 
+              Saídas matinais para áreas ricas em peixes, com todo equipamento necessário e 
+              instruções para iniciantes. Prática sustentável com devolução dos peixes ao mar.
+            </p>
+            <div class="activity-features">
+              <span><i class="fas fa-check-circle"></i> Equipamentos profissionais</span>
+              <span><i class="fas fa-check-circle"></i> Guia especializado</span>
+              <span><i class="fas fa-check-circle"></i> Prática sustentável</span>
+            </div>
+            <button class="activity-button">Agendar Atividade</button>
+          </div>
+        </div>
+        
+        <!-- Atividade 6: Massagem à Beira-Mar -->
+        <div class="activity-card" data-category="wellness" data-aos="fade-up" data-aos-delay="200">
+          <div class="activity-image">
+            <img src="images/massage.jpg" alt="Massagem à Beira-Mar">
+            <div class="activity-difficulty premium-activity">
+              <span>Premium</span>
+            </div>
+          </div>
+          <div class="activity-content">
+            <h3>Massagem à Beira-Mar</h3>
+            <div class="activity-meta">
+              <div class="activity-duration">
+                <i class="far fa-clock"></i>
+                <span>1-2 horas</span>
+              </div>
+              <div class="activity-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p class="activity-description">
+              Relaxe completamente com uma sessão de massagem terapêutica em um gazebo privativo 
+              à beira-mar. Nossos terapeutas certificados utilizam técnicas especiais e óleos aromáticos 
+              para proporcionar uma experiência sensorial completa.
+            </p>
+            <div class="activity-features">
+              <span><i class="fas fa-check-circle"></i> Terapeutas certificados</span>
+              <span><i class="fas fa-check-circle"></i> Óleos essenciais exclusivos</span>
+              <span><i class="fas fa-check-circle"></i> Ambiente privativo</span>
+            </div>
+            <button class="activity-button premium-button">Agendar Atividade</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Seção de Destaques -->
+    <section class="recreation-highlight" style="background-image: url('images/caminho-moises-tour.jpg')">
+      <div class="highlight-content" data-aos="fade-up">
+        <h2>Experiência Exclusiva: Caminho de Moisés</h2>
+        <p>
+          Explore o fenômeno natural que dá nome à nossa casa em um tour exclusivo guiado por 
+          especialistas locais. Durante a maré baixa, caminhe entre as águas por um caminho 
+          natural que se forma no mar, criando uma experiência verdadeiramente única e inesquecível.
+        </p>
+        <button class="highlight-button">Saiba Mais</button>
+      </div>
+    </section>
+    
+    <!-- Seção de Informações Adicionais -->
+    <section class="section recreation-info-section">
+      <div class="info-columns">
+        <div class="info-column" data-aos="fade-up">
+          <i class="fas fa-info-circle"></i>
+          <h3>Informações Importantes</h3>
+          <ul>
+            <li>Atividades sujeitas a disponibilidade e condições climáticas</li>
+            <li>Reservas antecipadas recomendadas</li>
+            <li>Equipamentos de segurança fornecidos em todas as atividades</li>
+            <li>Instrutores bilíngues disponíveis (Português/Inglês)</li>
+            <li>Atividades personalizadas podem ser organizadas mediante solicitação</li>
+          </ul>
+        </div>
+        
+        <div class="info-column" data-aos="fade-up" data-aos-delay="100">
+          <i class="fas fa-book"></i>
+          <h3>Como Reservar</h3>
+          <p>
+            Todas as atividades podem ser reservadas diretamente na recepção, 
+            pelo telefone ou antecipadamente pelo nosso site. Recomendamos 
+            reservar com pelo menos 24 horas de antecedência para garantir disponibilidade.
+          </p>
+          <p>
+            Consulte nossa equipe para informações detalhadas sobre preços, horários 
+            disponíveis e requisitos específicos para cada atividade.
+          </p>
+          <button class="info-button">Fale com nosso Concierge</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>&copy; 2025 Casa Pé na Areia – Caminho de Moisés. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  
+  <script>
+    // Script para menu lateral
+    const menuTrigger = document.getElementById('menu-trigger');
+    const sidebar = document.getElementById('sidebar');
+    const closeBtn = document.getElementById('close-btn');
+
+    menuTrigger.addEventListener('click', () => {
+      sidebar.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+
+    closeBtn.addEventListener('click', () => {
+      sidebar.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+    
+    // Inicialização das animações AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out',
+      once: true
+    });
+    
+    // Filtro de categorias de atividades
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterButtons = document.querySelectorAll('.activity-filter');
+      const activityCards = document.querySelectorAll('.activity-card');
+      
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          // Remove a classe active de todos os botões
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          
+          // Adiciona a classe active ao botão clicado
+          this.classList.add('active');
+          
+          // Obtém o valor do filtro
+          const filterValue = this.getAttribute('data-filter');
+          
+          // Filtra os cards
+          activityCards.forEach(card => {
+            if (filterValue === 'all') {
+              card.style.display = 'flex';
+              setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+              }, 50);
+            } else if (card.getAttribute('data-category').includes(filterValue)) {
+              card.style.display = 'flex';
+              setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+              }, 50);
+            } else {
+              card.style.opacity = '0';
+              card.style.transform = 'translateY(20px)';
+              setTimeout(() => {
+                card.style.display = 'none';
+              }, 300);
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

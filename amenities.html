@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comodidades - Casa Pé na Areia | Caminho de Moisés</title>
+  <link rel="stylesheet" href="style.css?v=3">
+  <!-- Fontes Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome para ícones mais elegantes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Lightbox para galerias de imagens -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+  
+  <!-- CSS adicional para melhorar os botões do Lightbox -->
+  <style>
+    /* Melhorando a visibilidade dos botões de navegação do Lightbox */
+    .lb-nav a.lb-prev,
+    .lb-nav a.lb-next {
+      opacity: 1 !important;
+      transition: all 0.3s ease;
+    }
+    
+    /* Estilizando o botão de fechar */
+    .lb-data .lb-close {
+      opacity: 1 !important;
+      transition: all 0.3s ease;
+    }
+    
+    /* Remover qualquer overlay ou tela adicional */
+    .lb-overlay, .lb-screen {
+      display: none !important;
+    }
+    
+    /* Remover quaisquer elementos que possam estar criando linhas */
+    .lb-container::before,
+    .lb-container::after {
+      display: none !important;
+    }
+    
+    /* Garantir que a imagem seja exibida corretamente */
+    .lb-image {
+      max-width: 100%;
+      height: auto !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="top-header header-light">
+    <div class="menu-trigger" id="menu-trigger">
+      <span class="menu-icon"><i class="fas fa-bars"></i></span>
+      <span class="menu-text">MENU</span>
+    </div>
+    <button class="booking-button">
+      RESERVAR AGORA
+    </button>
+  </header>
+
+  <!-- MENU LATERAL OCULTO (SOMENTE ABRE AO CLICAR) -->
+  <nav class="sidebar" id="sidebar">
+    <div class="close-btn" id="close-btn"><i class="fas fa-times"></i></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">Sobre</a></li>
+      <li><a href="gallery.html">Galeria</a></li>
+      <li><a href="suites.html">Suítes</a></li>
+      <li><a href="offers.html">Ofertas</a></li>
+      <li><a href="recreation.html">Recreação</a></li>
+      <li><a href="culture.html">Cultura</a></li>
+      <li><a href="special-events.html">Eventos Especiais</a></li>
+      <li><a href="contact.html">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main>
+    <!-- Cabeçalho da página -->
+    <div class="page-header" style="background-image: url('images/saladeestar.jpg');">
+      <h1>Nossas Comodidades</h1>
+    </div>
+    
+    <!-- Categorias de Navegação (comum a todas as páginas) -->
+    <div class="gallery-categories section-container">
+      <button class="gallery-filter" data-filter="all" onclick="window.location.href='gallery.html'">Todos</button>
+      <button class="gallery-filter" onclick="window.location.href='property.html'">Propriedade</button>
+      <button class="gallery-filter" onclick="window.location.href='beach.html'">Praia</button>
+      <button class="gallery-filter active" onclick="window.location.href='amenities.html'">Comodidades</button>
+      <button class="gallery-filter" onclick="window.location.href='experiences.html'">Experiências</button>
+    </div>
+    
+    <!-- Seção de Comodidades -->
+    <section class="section amenities-section">
+      <h2>Conheça Nossas Instalações</h2>
+      
+      <!-- Galeria de Imagens das Comodidades (AGORA ANTES DO TEXTO) -->
+      <div class="gallery-grid">
+        <!-- Imagem 1 -->
+        <div class="gallery-item">
+          <a href="images/fotoigrejadaguia.jpg" data-lightbox="amenities" data-title="Igreja da Guia - Atração Próxima">
+            <img src="images/fotoigrejadaguia.jpg" alt="Igreja da Guia">
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <h3>Igreja Nossa Senhora da Guia</h3>
+                <p>Construção do século VIII, próxima à pousada</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <!-- Imagem 2 -->
+        <div class="gallery-item">
+          <a href="images/praia.png" data-lightbox="amenities" data-title="Piscina com Vista para o Mar">
+            <img src="images/praia.png" alt="Piscina">
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <h3>Piscina</h3>
+                <p>Relaxe com uma vista espetacular</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <!-- Imagem 3 -->
+        <div class="gallery-item">
+          <a href="images/riomiriri.png" data-lightbox="amenities" data-title="Restaurante">
+            <img src="images/riomiriri.png" alt="Restaurante">
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <h3>Restaurante</h3>
+                <p>Gastronomia típica com ingredientes frescos</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <!-- Imagem 4 -->
+        <div class="gallery-item">
+          <a href="images/coqueirosdelucena.png" data-lightbox="amenities" data-title="Área de Descanso">
+            <img src="images/coqueirosdelucena.png" alt="Área de Descanso">
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <h3>Redário</h3>
+                <p>Momento de relaxamento entre os coqueiros</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <!-- Imagem 5 (Nova) -->
+        <div class="gallery-item">
+          <a href="images/bomsucesso.jpg" data-lightbox="amenities" data-title="Sala de Estar">
+            <img src="images/bomsucesso.jpg" alt="Sala de Estar">
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <h3>Sala de Estar</h3>
+                <p>Ambiente aconchegante com vista para o jardim</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <!-- Imagem 6 (Nova) -->
+        <div class="gallery-item">
+          <a href="images/caminhodemoises01.png" data-lightbox="amenities" data-title="Área Externa">
+            <img src="images/caminhodemoises01.png" alt="Área Externa">
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <h3>Área Externa</h3>
+                <p>Espaços ao ar livre para aproveitar a natureza</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Texto introdutório DEPOIS da galeria -->
+      <p class="section-intro">
+        Na Casa Pé na Areia, seu conforto é nossa prioridade. Por isso, oferecemos diversas comodidades para tornar
+        sua estadia ainda mais agradável e inesquecível.
+      </p>
+      
+      <!-- Grade de Comodidades -->
+      <div class="amenities-grid">
+        <div class="amenity-category">
+          <h3><i class="fas fa-utensils"></i> Gastronomia</h3>
+          <ul class="amenity-list">
+            <li>Café da manhã regional completo</li>
+            <li>Restaurante com culinária local e internacional</li>
+            <li>Serviço de quarto 24 horas</li>
+            <li>Bar na piscina</li>
+            <li>Área para churrasco</li>
+          </ul>
+        </div>
+        
+        <div class="amenity-category">
+          <h3><i class="fas fa-wifi"></i> Conectividade</h3>
+          <ul class="amenity-list">
+            <li>Wi-Fi gratuito em todas as áreas</li>
+            <li>Smart TVs nos quartos</li>
+            <li>Estação de trabalho</li>
+            <li>Tomadas USB</li>
+          </ul>
+        </div>
+        
+        <div class="amenity-category">
+          <h3><i class="fas fa-swimming-pool"></i> Lazer</h3>
+          <ul class="amenity-list">
+            <li>Piscina com vista para o mar</li>
+            <li>Deck com espreguiçadeiras</li>
+            <li>Redário com vista para o oceano</li>
+            <li>Sala de jogos</li>
+            <li>Biblioteca com literatura regional</li>
+          </ul>
+        </div>
+        
+        <div class="amenity-category">
+          <h3><i class="fas fa-concierge-bell"></i> Serviços</h3>
+          <ul class="amenity-list">
+            <li>Recepção 24 horas</li>
+            <li>Concierge</li>
+            <li>Serviço de lavanderia</li>
+            <li>Estacionamento gratuito</li>
+            <li>Transporte para atrações locais</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>&copy; 2025 Casa Pé na Areia – Caminho de Moisés. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+  
+  <script>
+    // Script para menu lateral
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuTrigger = document.getElementById('menu-trigger');
+      const sidebar = document.getElementById('sidebar');
+      const closeBtn = document.getElementById('close-btn');
+
+      if(menuTrigger && sidebar && closeBtn) {
+        // Abrir menu
+        menuTrigger.addEventListener('click', function() {
+          sidebar.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        });
+
+        // Fechar menu
+        closeBtn.addEventListener('click', function() {
+          sidebar.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+
+        // Clicar fora do menu também fecha
+        document.addEventListener('click', function(event) {
+          if (!sidebar.contains(event.target) && !menuTrigger.contains(event.target) && sidebar.classList.contains('active')) {
+            sidebar.classList.remove('active');
+            document.body.style.overflow = '';
+          }
+        });
+      } else {
+        console.error('Um ou mais elementos do menu não foram encontrados');
+      }
+    });
+    
+    // Configuração do Lightbox
+    lightbox.option({
+      'resizeDuration': 200,
+      'wrapAround': true,
+      'fadeDuration': 300,
+      'albumLabel': "Imagem %1 de %2",
+      'alwaysShowNavOnTouchDevices': true,
+      'showImageNumberLabel': true
+    });
+    
+    // Ajuste da visibilidade dos botões após o carregamento da imagem
+    document.addEventListener('DOMContentLoaded', function() {
+      // Após o carregamento, garante que os botões sejam visíveis
+      $(document).on('click', '[data-lightbox]', function() {
+        setTimeout(function() {
+          $('.lb-nav a.lb-prev').css('opacity', '1');
+          $('.lb-nav a.lb-next').css('opacity', '1');
+          $('.lb-data .lb-close').css('opacity', '1');
+          
+          // Remover qualquer elemento que possa estar criando a linha vertical
+          $('.lb-container').find('*:not(.lb-image, .lb-nav, .lb-prev, .lb-next, .lb-loader, .lb-dataContainer, .lb-numbers, .lb-caption, .lb-closeContainer, .lb-close)').remove();
+        }, 100);
+      });
+    });
+  </script>
+</body>
+</html>

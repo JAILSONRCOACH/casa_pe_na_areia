@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ofertas Exclusivas - Casa Pé na Areia | Caminho de Moisés</title>
+  <link rel="stylesheet" href="style.css?v=3">
+  <!-- Fontes Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome para ícones mais elegantes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- AOS para animações de scroll -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="top-header header-light">
+    <div class="menu-trigger" id="menu-trigger">
+      <span class="menu-icon"><i class="fas fa-bars"></i></span>
+      <span class="menu-text">MENU</span>
+    </div>
+    <button class="booking-button">
+      RESERVAR AGORA
+    </button>
+  </header>
+
+  <!-- MENU LATERAL OCULTO (SOMENTE ABRE AO CLICAR) -->
+  <nav class="sidebar" id="sidebar">
+    <div class="close-btn" id="close-btn"><i class="fas fa-times"></i></div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">Sobre</a></li>
+      <li><a href="gallery.html">Galeria</a></li>
+      <li><a href="suites.html">Suítes</a></li>
+      <li><a href="offers.html">Ofertas</a></li>
+      <li><a href="recreation.html">Recreação</a></li>
+      <li><a href="culture.html">Cultura</a></li>
+      <li><a href="special-events.html">Eventos Especiais</a></li>
+      <li><a href="contact.html">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main>
+    <!-- Cabeçalho da página -->
+    <div class="page-header" style="background-image: url('images/offers-header.jpg');">
+      <h1>Ofertas Exclusivas</h1>
+    </div>
+    
+    <!-- Seção de Introdução -->
+    <section class="section offers-intro-section">
+      <h2>Experiências Inesquecíveis</h2>
+      <p class="offers-intro">
+        Preparamos promoções e pacotes especiais para tornar sua estadia ainda mais memorável.
+        Seja para um momento romântico, uma celebração especial ou simplesmente para aproveitar
+        mais tempo em nosso paraíso à beira-mar.
+      </p>
+      
+      <!-- Filtro de Ofertas -->
+      <div class="offers-filter">
+        <button class="filter-button active" data-filter="all">Todas as Ofertas</button>
+        <button class="filter-button" data-filter="romantic">Românticas</button>
+        <button class="filter-button" data-filter="family">Família</button>
+        <button class="filter-button" data-filter="seasonal">Sazonais</button>
+        <button class="filter-button" data-filter="extended">Estadia Prolongada</button>
+      </div>
+    </section>
+    
+    <!-- Seção de Ofertas -->
+    <section class="section offers-section">
+      <div class="offers-container">
+        <!-- Oferta 1: Pacote Romântico -->
+        <div class="offer-card" data-category="romantic" data-aos="fade-up">
+          <div class="offer-image">
+            <img src="images/romantic-package.jpg" alt="Pacote Romântico">
+            <div class="offer-tag">Momentos Especiais</div>
+          </div>
+          <div class="offer-content">
+            <h3>Pacote Romântico</h3>
+            <div class="offer-details">
+              <div class="offer-duration">
+                <i class="fas fa-calendar-alt"></i>
+                <span>2 Noites</span>
+              </div>
+              <div class="offer-price">
+                <span class="old-price">R$ 1.200</span>
+                <span class="current-price">R$ 980</span>
+              </div>
+            </div>
+            <p class="offer-description">
+              Celebre o amor com nosso exclusivo pacote romântico que inclui jantar à luz de velas à beira-mar, 
+              decoração especial no quarto com pétalas de rosas, espumante premium, café da manhã especial servido
+              na suíte e um tratamento de spa para casal.
+            </p>
+            <div class="offer-includes">
+              <h4>O Pacote Inclui:</h4>
+              <ul>
+                <li><i class="fas fa-check"></i> Hospedagem em Suíte Luxo</li>
+                <li><i class="fas fa-check"></i> Jantar à luz de velas à beira-mar</li>
+                <li><i class="fas fa-check"></i> Decoração romântica no quarto</li>
+                <li><i class="fas fa-check"></i> Espumante premium</li>
+                <li><i class="fas fa-check"></i> Tratamento de spa para casal (60 min)</li>
+              </ul>
+            </div>
+            <div class="offer-cta">
+              <button class="offer-button">Reservar Agora</button>
+              <div class="offer-validity">Válido até 30/12/2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Oferta 2: Fique 4 Noites, Pague 3 -->
+        <div class="offer-card" data-category="extended" data-aos="fade-up" data-aos-delay="100">
+          <div class="offer-image">
+            <img src="images/extended-stay.jpg" alt="Estadia Prolongada">
+            <div class="offer-tag">Mais Tempo de Paraíso</div>
+          </div>
+          <div class="offer-content">
+            <h3>Fique 4 Noites, Pague 3</h3>
+            <div class="offer-details">
+              <div class="offer-duration">
+                <i class="fas fa-calendar-alt"></i>
+                <span>4 Noites</span>
+              </div>
+              <div class="offer-price">
+                <span class="discount">25% OFF</span>
+              </div>
+            </div>
+            <p class="offer-description">
+              Prolongue sua estadia e aproveite mais do nosso paraíso com esta oferta especial: 
+              hospede-se por 4 noites e pague apenas 3. Ideal para quem deseja mais tempo para 
+              relaxar e explorar as belezas da região durante a baixa temporada.
+            </p>
+            <div class="offer-includes">
+              <h4>O Pacote Inclui:</h4>
+              <ul>
+                <li><i class="fas fa-check"></i> 4 noites pelo preço de 3</li>
+                <li><i class="fas fa-check"></i> Café da manhã completo</li>
+                <li><i class="fas fa-check"></i> Welcome drink</li>
+                <li><i class="fas fa-check"></i> Early check-in (sujeito à disponibilidade)</li>
+                <li><i class="fas fa-check"></i> Late check-out (sujeito à disponibilidade)</li>
+              </ul>
+            </div>
+            <div class="offer-cta">
+              <button class="offer-button">Reservar Agora</button>
+              <div class="offer-validity">Válido para Baixa Temporada (Março a Junho/2025)</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Oferta 3: Pacote Familiar -->
+        <div class="offer-card" data-category="family" data-aos="fade-up" data-aos-delay="200">
+          <div class="offer-image">
+            <img src="images/family-package.jpg" alt="Pacote Familiar">
+            <div class="offer-tag">Diversão em Família</div>
+          </div>
+          <div class="offer-content">
+            <h3>Pacote Familiar</h3>
+            <div class="offer-details">
+              <div class="offer-duration">
+                <i class="fas fa-calendar-alt"></i>
+                <span>5 Noites</span>
+              </div>
+              <div class="offer-price">
+                <span class="old-price">R$ 3.500</span>
+                <span class="current-price">R$ 2.800</span>
+              </div>
+            </div>
+            <p class="offer-description">
+              Crie memórias inesquecíveis em família com este pacote especial que inclui 
+              atividades para todas as idades. Hospede-se em nossa Suíte Família e desfrute 
+              de atividades aquáticas, passeios guiados e momentos especiais juntos.
+            </p>
+            <div class="offer-includes">
+              <h4>O Pacote Inclui:</h4>
+              <ul>
+                <li><i class="fas fa-check"></i> 5 noites em Suíte Família</li>
+                <li><i class="fas fa-check"></i> Passeio de barco pelo Caminho de Moisés</li>
+                <li><i class="fas fa-check"></i> Piquenique à beira-mar</li>
+                <li><i class="fas fa-check"></i> Uma sessão de stand up paddle para a família</li>
+                <li><i class="fas fa-check"></i> Crianças até 10 anos grátis (máx. 2)</li>
+              </ul>
+            </div>
+            <div class="offer-cta">
+              <button class="offer-button">Reservar Agora</button>
+              <div class="offer-validity">Válido durante todo o ano de 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Oferta 4: Réveillon Especial -->
+        <div class="offer-card" data-category="seasonal" data-aos="fade-up" data-aos-delay="300">
+          <div class="offer-image">
+            <img src="images/new-year-package.jpg" alt="Pacote Réveillon">
+            <div class="offer-tag highlight-tag">Celebração Especial</div>
+          </div>
+          <div class="offer-content">
+            <h3>Réveillon à Beira-Mar</h3>
+            <div class="offer-details">
+              <div class="offer-duration">
+                <i class="fas fa-calendar-alt"></i>
+                <span>3 Noites</span>
+              </div>
+              <div class="offer-price">
+                <span class="current-price">R$ 4.200</span>
+              </div>
+            </div>
+            <p class="offer-description">
+              Celebre a chegada do Ano Novo em grande estilo com nosso pacote exclusivo de Réveillon. 
+              Inclui hospedagem premium, ceia especial à beira-mar com menu elaborado por nosso chef, 
+              festa com música ao vivo, champagne à meia-noite e muito mais.
+            </p>
+            <div class="offer-includes">
+              <h4>O Pacote Inclui:</h4>
+              <ul>
+                <li><i class="fas fa-check"></i> 3 noites em Suíte Premium</li>
+                <li><i class="fas fa-check"></i> Ceia especial de Réveillon</li>
+                <li><i class="fas fa-check"></i> Festa com música ao vivo</li>
+                <li><i class="fas fa-check"></i> Champagne para brinde à meia-noite</li>
+                <li><i class="fas fa-check"></i> Brunch especial de Ano Novo</li>
+              </ul>
+            </div>
+            <div class="offer-cta">
+              <button class="offer-button limited">Vagas Limitadas</button>
+              <div class="offer-validity">Válido para 29/12/2025 a 01/01/2026</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Seção de Promoção Extra -->
+    <section class="section promotion-section" style="background-image: url('images/promo-background.jpg');">
+      <div class="promotion-content" data-aos="fade-up">
+        <h2>Seja o Primeiro a Saber</h2>
+        <p>
+          Assine nossa newsletter e receba ofertas exclusivas, promoções relâmpago 
+          e novidades antes de todos.
+        </p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Seu e-mail" required>
+          <button type="submit">Inscrever-se</button>
+        </form>
+        <div class="promotion-note">
+          <i class="fas fa-gift"></i>
+          <span>Ganhe 10% de desconto em sua próxima reserva ao se inscrever!</span>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Seção de FAQ -->
+    <section class="section faq-section">
+      <h2>Perguntas Frequentes</h2>
+      <div class="faq-container">
+        <div class="faq-item" data-aos="fade-up">
+          <div class="faq-question">
+            <h3>Como posso reservar um pacote promocional?</h3>
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Para reservar qualquer um de nossos pacotes promocionais, clique no botão "Reservar Agora" 
+              na oferta desejada ou entre em contato diretamente através do nosso telefone ou e-mail. 
+              Nossa equipe terá prazer em ajudá-lo com o processo de reserva.
+            </p>
+          </div>
+        </div>
+        
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="faq-question">
+            <h3>As ofertas podem ser combinadas com outros descontos?</h3>
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Em geral, nossas ofertas e pacotes promocionais não podem ser combinados com outros descontos 
+              ou promoções. Cada oferta é exclusiva e aplicável conforme as condições específicas mencionadas 
+              em sua descrição.
+            </p>
+          </div>
+        </div>
+        
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="faq-question">
+            <h3>As datas das promoções podem ser modificadas?</h3>
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Algumas ofertas possuem datas específicas e não podem ser modificadas, especialmente aquelas 
+              relacionadas a eventos sazonais como Réveillon. Outras ofertas têm maior flexibilidade. 
+              Recomendamos verificar os detalhes de cada promoção ou consultar nossa equipe para informações 
+              sobre disponibilidade e possibilidade de ajustes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>&copy; 2025 Casa Pé na Areia – Caminho de Moisés. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  
+  <script>
+    // Script para menu lateral
+    const menuTrigger = document.getElementById('menu-trigger');
+    const sidebar = document.getElementById('sidebar');
+    const closeBtn = document.getElementById('close-btn');
+
+    menuTrigger.addEventListener('click', () => {
+      sidebar.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+
+    closeBtn.addEventListener('click', () => {
+      sidebar.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+    
+    // Inicialização das animações AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out',
+      once: true
+    });
+    
+    // Filtro de categorias das ofertas
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterButtons = document.querySelectorAll('.filter-button');
+      const offerCards = document.querySelectorAll('.offer-card');
+      
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          // Remove a classe active de todos os botões
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          
+          // Adiciona a classe active ao botão clicado
+          this.classList.add('active');
+          
+          // Obtém o valor do filtro
+          const filterValue = this.getAttribute('data-filter');
+          
+          // Filtra os cards
+          offerCards.forEach(card => {
+            if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+      
+      // Accordion para FAQ
+      const faqItems = document.querySelectorAll('.faq-item');
+      
+      faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        
+        question.addEventListener('click', () => {
+          // Toggle da classe active para abrir/fechar
+          item.classList.toggle('active');
+          
+          // Toggle do ícone
+          const icon = item.querySelector('.faq-icon i');
+          if (item.classList.contains('active')) {
+            icon.classList.replace('fa-plus', 'fa-minus');
+          } else {
+            icon.classList.replace('fa-minus', 'fa-plus');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
