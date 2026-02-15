@@ -544,6 +544,32 @@ footer p {
     font-size: 28px;
     letter-spacing: 0.35em;
   }
+
+  /* Mobile Header Fixes */
+  .top-header {
+    padding: 15px 20px;
+    gap: 15px;
+  }
+
+  .booking-button {
+    padding: 8px 15px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+
+  .menu-trigger {
+    padding: 6px 12px;
+  }
+
+  .menu-text {
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+
+  .menu-icon {
+    font-size: 18px;
+  }
 }
 
 /*======================================
